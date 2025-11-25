@@ -46,10 +46,11 @@ export default function Services() {
         phone: CryptoJS.AES.encrypt(phone, 'ce-secret-key').toString(),
         description: CryptoJS.AES.encrypt(description, 'ce-secret-key').toString(),
         fileUrl,
+        fileName: file ? file.name : '',
         status: 'pending',
         createdAt: new Date(),
       });
-      Alert.alert('Success', 'Estimate request submitted');
+      Alert.alert('Success', 'Thank you for your interest, our team will contact you');
       setName('');
       setPhone('');
       setDescription('');

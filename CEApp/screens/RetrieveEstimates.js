@@ -19,8 +19,7 @@ export default function RetrieveEstimates({ navigation }) {
     querySnapshot.forEach((docSnap) => {
       const data = docSnap.data();
       const decryptedEmail = CryptoJS.AES.decrypt(data.email, key).toString(CryptoJS.enc.Utf8);
-      const decryptedPhone = CryptoJS.AES.decrypt(data.phone, key).toString(CryptoJS.enc.Utf8);
-      if (decryptedEmail === input || decryptedPhone === input) {
+      if (decryptedEmail === input) {
         ests.push({
           id: docSnap.id,
           estimateUrl: data.estimateUrl,
@@ -42,7 +41,7 @@ export default function RetrieveEstimates({ navigation }) {
 
   return (
     <View style={{ flex: 1, padding: 20 }}>
-      <TextInput label="Enter Email or Phone" value={input} onChangeText={setInput} />
+      <TextInput label="Enter Email" value={input} onChangeText={setInput} />
       <Button onPress={search} style={{ marginTop: 10 }}>Search</Button>
       <Button onPress={() => navigation.goBack()} style={{ marginTop: 10 }}>Back</Button>
       <FlatList

@@ -1,0 +1,368 @@
+extend type Query {
+  """
+  ✨ Look up a single `Bid` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  bid(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Bid_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Bid_FirstRow
+  ): Bid @fdc_generated(from: "Bid", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `ContractorProfile` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  contractorProfile(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: ContractorProfile_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: ContractorProfile_FirstRow
+  ): ContractorProfile @fdc_generated(from: "ContractorProfile", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `ContractorService` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  contractorService(
+    """
+    The key used to identify the object.
+    """
+    key: ContractorService_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: ContractorService_FirstRow
+  ): ContractorService @fdc_generated(from: "ContractorService", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `Project` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  project(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Project_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Project_FirstRow
+  ): Project @fdc_generated(from: "Project", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `Review` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  review(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Review_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Review_FirstRow
+  ): Review @fdc_generated(from: "Review", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `Service` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  service(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Service_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Service_FirstRow
+  ): Service @fdc_generated(from: "Service", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `User` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  user(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: User_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: User_FirstRow
+  ): User @fdc_generated(from: "User", purpose: QUERY_SINGLE)
+  """
+  ✨ List `Bid` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  bids(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Bid_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Bid_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Bid_Having
+  ): [Bid!]! @fdc_generated(from: "Bid", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `ContractorProfile` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  contractorProfiles(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: ContractorProfile_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [ContractorProfile_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: ContractorProfile_Having
+  ): [ContractorProfile!]! @fdc_generated(from: "ContractorProfile", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `ContractorService` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  contractorServices(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: ContractorService_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [ContractorService_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: ContractorService_Having
+  ): [ContractorService!]! @fdc_generated(from: "ContractorService", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `Project` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  projects(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Project_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Project_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Project_Having
+  ): [Project!]! @fdc_generated(from: "Project", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `Review` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  reviews(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Review_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Review_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Review_Having
+  ): [Review!]! @fdc_generated(from: "Review", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `Service` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  services(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Service_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Service_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Service_Having
+  ): [Service!]! @fdc_generated(from: "Service", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `User` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  users(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: User_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [User_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: User_Having
+  ): [User!]! @fdc_generated(from: "User", purpose: QUERY_MULTIPLE)
+}

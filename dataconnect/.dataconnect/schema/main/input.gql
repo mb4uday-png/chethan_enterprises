@@ -1,0 +1,2431 @@
+"""
+✨ `Bid_KeyOutput` returns the primary key fields of table type `Bid`.
+
+It has the same format as `Bid_Key`, but is only used as mutation return value.
+"""
+scalar Bid_KeyOutput
+"""
+✨ `ContractorProfile_KeyOutput` returns the primary key fields of table type `ContractorProfile`.
+
+It has the same format as `ContractorProfile_Key`, but is only used as mutation return value.
+"""
+scalar ContractorProfile_KeyOutput
+"""
+✨ `ContractorService_KeyOutput` returns the primary key fields of table type `ContractorService`.
+
+It has the same format as `ContractorService_Key`, but is only used as mutation return value.
+"""
+scalar ContractorService_KeyOutput
+"""
+✨ `Project_KeyOutput` returns the primary key fields of table type `Project`.
+
+It has the same format as `Project_Key`, but is only used as mutation return value.
+"""
+scalar Project_KeyOutput
+"""
+✨ `Review_KeyOutput` returns the primary key fields of table type `Review`.
+
+It has the same format as `Review_Key`, but is only used as mutation return value.
+"""
+scalar Review_KeyOutput
+"""
+✨ `Service_KeyOutput` returns the primary key fields of table type `Service`.
+
+It has the same format as `Service_Key`, but is only used as mutation return value.
+"""
+scalar Service_KeyOutput
+"""
+✨ `User_KeyOutput` returns the primary key fields of table type `User`.
+
+It has the same format as `User_Key`, but is only used as mutation return value.
+"""
+scalar User_KeyOutput
+"""
+✨ Generated data input type for table 'Bid'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Bid_Data {
+  """
+  ✨ Generated from Field `Bid`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Bid`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Bid`.`contractorProfileId` of type `UUID`
+  """
+  contractorProfileId: UUID
+  """
+  ✨ `_expr` server value variant of `contractorProfileId` (✨ Generated from Field `Bid`.`contractorProfileId` of type `UUID`)
+  """
+  contractorProfileId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Bid`.`projectId` of type `UUID`
+  """
+  projectId: UUID
+  """
+  ✨ `_expr` server value variant of `projectId` (✨ Generated from Field `Bid`.`projectId` of type `UUID`)
+  """
+  projectId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Bid`.`contractorProfile` of type `ContractorProfile`
+  """
+  contractorProfile: ContractorProfile_Key
+  """
+  ✨ Generated from Field `Bid`.`project` of type `Project`
+  """
+  project: Project_Key
+  """
+  ✨ Generated from Field `Bid`.`amount` of type `Float!`
+  """
+  amount: Float
+  """
+  ✨ `_expr` server value variant of `amount` (✨ Generated from Field `Bid`.`amount` of type `Float!`)
+  """
+  amount_expr: Float_Expr
+  """
+  ✨ `_update` server value variant of `amount` (✨ Generated from Field `Bid`.`amount` of type `Float!`)
+  """
+  amount_update: [Float_Update!]
+  """
+  ✨ Generated from Field `Bid`.`bidDate` of type `Timestamp!`
+  """
+  bidDate: Timestamp
+  """
+  ✨ `_expr` server value variant of `bidDate` (✨ Generated from Field `Bid`.`bidDate` of type `Timestamp!`)
+  """
+  bidDate_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `bidDate` (✨ Generated from Field `Bid`.`bidDate` of type `Timestamp!`)
+  """
+  bidDate_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `bidDate` (✨ Generated from Field `Bid`.`bidDate` of type `Timestamp!`)
+  """
+  bidDate_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `Bid`.`notes` of type `String`
+  """
+  notes: String
+  """
+  ✨ `_expr` server value variant of `notes` (✨ Generated from Field `Bid`.`notes` of type `String`)
+  """
+  notes_expr: String_Expr
+  """
+  ✨ Generated from Field `Bid`.`status` of type `String!`
+  """
+  status: String
+  """
+  ✨ `_expr` server value variant of `status` (✨ Generated from Field `Bid`.`status` of type `String!`)
+  """
+  status_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'Bid'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Bid_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Bid_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Bid_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Bid_Filter!]
+  """
+  ✨ Generated from Field `Bid`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Bid`.`contractorProfileId` of type `UUID`
+  """
+  contractorProfileId: UUID_Filter
+  """
+  ✨ Generated from Field `Bid`.`projectId` of type `UUID`
+  """
+  projectId: UUID_Filter
+  """
+  ✨ Generated from Field `Bid`.`contractorProfile` of type `ContractorProfile`
+  """
+  contractorProfile: ContractorProfile_Filter
+  """
+  ✨ Generated from Field `Bid`.`project` of type `Project`
+  """
+  project: Project_Filter
+  """
+  ✨ Generated from Field `Bid`.`amount` of type `Float!`
+  """
+  amount: Float_Filter
+  """
+  ✨ Generated from Field `Bid`.`bidDate` of type `Timestamp!`
+  """
+  bidDate: Timestamp_Filter
+  """
+  ✨ Generated from Field `Bid`.`notes` of type `String`
+  """
+  notes: String_Filter
+  """
+  ✨ Generated from Field `Bid`.`status` of type `String!`
+  """
+  status: String_Filter
+}
+"""
+✨ Generated first-row input type for table 'Bid'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Bid_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Bid_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Bid_Filter
+}
+"""
+✨ Generated having input type for table 'Bid'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Bid_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Bid_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Bid_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Bid_Having!]
+  """
+  ✨ Generated from Field `Bid`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Bid`.`amount_count` of type `Int!`
+  """
+  amount_count: Int_Filter
+  """
+  ✨ Generated from Field `Bid`.`bidDate_count` of type `Int!`
+  """
+  bidDate_count: Int_Filter
+  """
+  ✨ Generated from Field `Bid`.`contractorProfileId_count` of type `Int!`
+  """
+  contractorProfileId_count: Int_Filter
+  """
+  ✨ Generated from Field `Bid`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Bid`.`notes_count` of type `Int!`
+  """
+  notes_count: Int_Filter
+  """
+  ✨ Generated from Field `Bid`.`projectId_count` of type `Int!`
+  """
+  projectId_count: Int_Filter
+  """
+  ✨ Generated from Field `Bid`.`status_count` of type `Int!`
+  """
+  status_count: Int_Filter
+  """
+  ✨ Generated from Field `Bid`.`amount_sum` of type `Float`
+  """
+  amount_sum: Float_Filter
+  """
+  ✨ Generated from Field `Bid`.`amount_avg` of type `Float`
+  """
+  amount_avg: Float_Filter
+  """
+  ✨ Generated from Field `Bid`.`amount_min` of type `Float`
+  """
+  amount_min: Float_Filter
+  """
+  ✨ Generated from Field `Bid`.`bidDate_min` of type `Timestamp`
+  """
+  bidDate_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `Bid`.`amount_max` of type `Float`
+  """
+  amount_max: Float_Filter
+  """
+  ✨ Generated from Field `Bid`.`bidDate_max` of type `Timestamp`
+  """
+  bidDate_max: Timestamp_Filter
+}
+"""
+✨ Generated key input type for table 'Bid'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Bid_Key {
+  """
+  ✨ Generated from Field `Bid`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Bid`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'Bid'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Bid_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Bid_Filter
+}
+"""
+✨ Generated order input type for table 'Bid'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Bid_Order {
+  """
+  ✨ Generated from Field `Bid`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`contractorProfileId` of type `UUID`
+  """
+  contractorProfileId: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`projectId` of type `UUID`
+  """
+  projectId: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`contractorProfile` of type `ContractorProfile`
+  """
+  contractorProfile: ContractorProfile_Order
+  """
+  ✨ Generated from Field `Bid`.`project` of type `Project`
+  """
+  project: Project_Order
+  """
+  ✨ Generated from Field `Bid`.`amount` of type `Float!`
+  """
+  amount: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`bidDate` of type `Timestamp!`
+  """
+  bidDate: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`notes` of type `String`
+  """
+  notes: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`status` of type `String!`
+  """
+  status: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`amount_count` of type `Int!`
+  """
+  amount_count: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`bidDate_count` of type `Int!`
+  """
+  bidDate_count: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`contractorProfileId_count` of type `Int!`
+  """
+  contractorProfileId_count: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`notes_count` of type `Int!`
+  """
+  notes_count: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`projectId_count` of type `Int!`
+  """
+  projectId_count: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`status_count` of type `Int!`
+  """
+  status_count: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`amount_sum` of type `Float`
+  """
+  amount_sum: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`amount_avg` of type `Float`
+  """
+  amount_avg: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`amount_min` of type `Float`
+  """
+  amount_min: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`bidDate_min` of type `Timestamp`
+  """
+  bidDate_min: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`amount_max` of type `Float`
+  """
+  amount_max: OrderDirection
+  """
+  ✨ Generated from Field `Bid`.`bidDate_max` of type `Timestamp`
+  """
+  bidDate_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'ContractorProfile'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input ContractorProfile_Data {
+  """
+  ✨ Generated from Field `ContractorProfile`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `ContractorProfile`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `ContractorProfile`.`userId` of type `UUID`
+  """
+  userId: UUID
+  """
+  ✨ `_expr` server value variant of `userId` (✨ Generated from Field `ContractorProfile`.`userId` of type `UUID`)
+  """
+  userId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `ContractorProfile`.`user` of type `User`
+  """
+  user: User_Key
+  """
+  ✨ Generated from Field `ContractorProfile`.`bio` of type `String`
+  """
+  bio: String
+  """
+  ✨ `_expr` server value variant of `bio` (✨ Generated from Field `ContractorProfile`.`bio` of type `String`)
+  """
+  bio_expr: String_Expr
+  """
+  ✨ Generated from Field `ContractorProfile`.`experienceYears` of type `Int!`
+  """
+  experienceYears: Int
+  """
+  ✨ `_expr` server value variant of `experienceYears` (✨ Generated from Field `ContractorProfile`.`experienceYears` of type `Int!`)
+  """
+  experienceYears_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `experienceYears` (✨ Generated from Field `ContractorProfile`.`experienceYears` of type `Int!`)
+  """
+  experienceYears_update: [Int_Update!]
+  """
+  ✨ Generated from Field `ContractorProfile`.`hourlyRate` of type `Float`
+  """
+  hourlyRate: Float
+  """
+  ✨ `_expr` server value variant of `hourlyRate` (✨ Generated from Field `ContractorProfile`.`hourlyRate` of type `Float`)
+  """
+  hourlyRate_expr: Float_Expr
+  """
+  ✨ `_update` server value variant of `hourlyRate` (✨ Generated from Field `ContractorProfile`.`hourlyRate` of type `Float`)
+  """
+  hourlyRate_update: [Float_Update!]
+  """
+  ✨ Generated from Field `ContractorProfile`.`licenseNumber` of type `String!`
+  """
+  licenseNumber: String
+  """
+  ✨ `_expr` server value variant of `licenseNumber` (✨ Generated from Field `ContractorProfile`.`licenseNumber` of type `String!`)
+  """
+  licenseNumber_expr: String_Expr
+  """
+  ✨ Generated from Field `ContractorProfile`.`websiteUrl` of type `String`
+  """
+  websiteUrl: String
+  """
+  ✨ `_expr` server value variant of `websiteUrl` (✨ Generated from Field `ContractorProfile`.`websiteUrl` of type `String`)
+  """
+  websiteUrl_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'ContractorProfile'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input ContractorProfile_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [ContractorProfile_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: ContractorProfile_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [ContractorProfile_Filter!]
+  """
+  ✨ Generated from Field `ContractorProfile`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `ContractorProfile`.`userId` of type `UUID`
+  """
+  userId: UUID_Filter
+  """
+  ✨ Generated from Field `ContractorProfile`.`user` of type `User`
+  """
+  user: User_Filter
+  """
+  ✨ Generated from Field `ContractorProfile`.`bio` of type `String`
+  """
+  bio: String_Filter
+  """
+  ✨ Generated from Field `ContractorProfile`.`experienceYears` of type `Int!`
+  """
+  experienceYears: Int_Filter
+  """
+  ✨ Generated from Field `ContractorProfile`.`hourlyRate` of type `Float`
+  """
+  hourlyRate: Float_Filter
+  """
+  ✨ Generated from Field `ContractorProfile`.`licenseNumber` of type `String!`
+  """
+  licenseNumber: String_Filter
+  """
+  ✨ Generated from Field `ContractorProfile`.`websiteUrl` of type `String`
+  """
+  websiteUrl: String_Filter
+  """
+  ✨ Generated from Field `ContractorProfile`.`bids_on_contractorProfile` of type `[Bid!]!`
+  """
+  bids_on_contractorProfile: Bid_ListFilter
+  """
+  ✨ Generated from Field `ContractorProfile`.`contractorServices_on_contractorProfile` of type `[ContractorService!]!`
+  """
+  contractorServices_on_contractorProfile: ContractorService_ListFilter
+  """
+  ✨ Generated from Field `ContractorProfile`.`projects_on_hiredContractor` of type `[Project!]!`
+  """
+  projects_on_hiredContractor: Project_ListFilter
+  """
+  ✨ Generated from Field `ContractorProfile`.`reviews_on_contractorProfile` of type `[Review!]!`
+  """
+  reviews_on_contractorProfile: Review_ListFilter
+  """
+  ✨ Generated from Field `ContractorProfile`.`services_via_ContractorService` of type `[Service!]!`
+  """
+  services_via_ContractorService: Service_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'ContractorProfile'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input ContractorProfile_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [ContractorProfile_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: ContractorProfile_Filter
+}
+"""
+✨ Generated having input type for table 'ContractorProfile'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input ContractorProfile_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [ContractorProfile_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: ContractorProfile_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [ContractorProfile_Having!]
+  """
+  ✨ Generated from Field `ContractorProfile`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `ContractorProfile`.`bio_count` of type `Int!`
+  """
+  bio_count: Int_Filter
+  """
+  ✨ Generated from Field `ContractorProfile`.`experienceYears_count` of type `Int!`
+  """
+  experienceYears_count: Int_Filter
+  """
+  ✨ Generated from Field `ContractorProfile`.`hourlyRate_count` of type `Int!`
+  """
+  hourlyRate_count: Int_Filter
+  """
+  ✨ Generated from Field `ContractorProfile`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `ContractorProfile`.`licenseNumber_count` of type `Int!`
+  """
+  licenseNumber_count: Int_Filter
+  """
+  ✨ Generated from Field `ContractorProfile`.`userId_count` of type `Int!`
+  """
+  userId_count: Int_Filter
+  """
+  ✨ Generated from Field `ContractorProfile`.`websiteUrl_count` of type `Int!`
+  """
+  websiteUrl_count: Int_Filter
+  """
+  ✨ Generated from Field `ContractorProfile`.`experienceYears_sum` of type `Int`
+  """
+  experienceYears_sum: Int_Filter
+  """
+  ✨ Generated from Field `ContractorProfile`.`hourlyRate_sum` of type `Float`
+  """
+  hourlyRate_sum: Float_Filter
+  """
+  ✨ Generated from Field `ContractorProfile`.`experienceYears_avg` of type `Float`
+  """
+  experienceYears_avg: Float_Filter
+  """
+  ✨ Generated from Field `ContractorProfile`.`hourlyRate_avg` of type `Float`
+  """
+  hourlyRate_avg: Float_Filter
+  """
+  ✨ Generated from Field `ContractorProfile`.`experienceYears_min` of type `Int`
+  """
+  experienceYears_min: Int_Filter
+  """
+  ✨ Generated from Field `ContractorProfile`.`hourlyRate_min` of type `Float`
+  """
+  hourlyRate_min: Float_Filter
+  """
+  ✨ Generated from Field `ContractorProfile`.`experienceYears_max` of type `Int`
+  """
+  experienceYears_max: Int_Filter
+  """
+  ✨ Generated from Field `ContractorProfile`.`hourlyRate_max` of type `Float`
+  """
+  hourlyRate_max: Float_Filter
+}
+"""
+✨ Generated key input type for table 'ContractorProfile'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input ContractorProfile_Key {
+  """
+  ✨ Generated from Field `ContractorProfile`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `ContractorProfile`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'ContractorProfile'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input ContractorProfile_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: ContractorProfile_Filter
+}
+"""
+✨ Generated order input type for table 'ContractorProfile'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input ContractorProfile_Order {
+  """
+  ✨ Generated from Field `ContractorProfile`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `ContractorProfile`.`userId` of type `UUID`
+  """
+  userId: OrderDirection
+  """
+  ✨ Generated from Field `ContractorProfile`.`user` of type `User`
+  """
+  user: User_Order
+  """
+  ✨ Generated from Field `ContractorProfile`.`bio` of type `String`
+  """
+  bio: OrderDirection
+  """
+  ✨ Generated from Field `ContractorProfile`.`experienceYears` of type `Int!`
+  """
+  experienceYears: OrderDirection
+  """
+  ✨ Generated from Field `ContractorProfile`.`hourlyRate` of type `Float`
+  """
+  hourlyRate: OrderDirection
+  """
+  ✨ Generated from Field `ContractorProfile`.`licenseNumber` of type `String!`
+  """
+  licenseNumber: OrderDirection
+  """
+  ✨ Generated from Field `ContractorProfile`.`websiteUrl` of type `String`
+  """
+  websiteUrl: OrderDirection
+  """
+  ✨ Generated from Field `ContractorProfile`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `ContractorProfile`.`bio_count` of type `Int!`
+  """
+  bio_count: OrderDirection
+  """
+  ✨ Generated from Field `ContractorProfile`.`experienceYears_count` of type `Int!`
+  """
+  experienceYears_count: OrderDirection
+  """
+  ✨ Generated from Field `ContractorProfile`.`hourlyRate_count` of type `Int!`
+  """
+  hourlyRate_count: OrderDirection
+  """
+  ✨ Generated from Field `ContractorProfile`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `ContractorProfile`.`licenseNumber_count` of type `Int!`
+  """
+  licenseNumber_count: OrderDirection
+  """
+  ✨ Generated from Field `ContractorProfile`.`userId_count` of type `Int!`
+  """
+  userId_count: OrderDirection
+  """
+  ✨ Generated from Field `ContractorProfile`.`websiteUrl_count` of type `Int!`
+  """
+  websiteUrl_count: OrderDirection
+  """
+  ✨ Generated from Field `ContractorProfile`.`experienceYears_sum` of type `Int`
+  """
+  experienceYears_sum: OrderDirection
+  """
+  ✨ Generated from Field `ContractorProfile`.`hourlyRate_sum` of type `Float`
+  """
+  hourlyRate_sum: OrderDirection
+  """
+  ✨ Generated from Field `ContractorProfile`.`experienceYears_avg` of type `Float`
+  """
+  experienceYears_avg: OrderDirection
+  """
+  ✨ Generated from Field `ContractorProfile`.`hourlyRate_avg` of type `Float`
+  """
+  hourlyRate_avg: OrderDirection
+  """
+  ✨ Generated from Field `ContractorProfile`.`experienceYears_min` of type `Int`
+  """
+  experienceYears_min: OrderDirection
+  """
+  ✨ Generated from Field `ContractorProfile`.`hourlyRate_min` of type `Float`
+  """
+  hourlyRate_min: OrderDirection
+  """
+  ✨ Generated from Field `ContractorProfile`.`experienceYears_max` of type `Int`
+  """
+  experienceYears_max: OrderDirection
+  """
+  ✨ Generated from Field `ContractorProfile`.`hourlyRate_max` of type `Float`
+  """
+  hourlyRate_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'ContractorService'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input ContractorService_Data {
+  """
+  ✨ Generated from Field `ContractorService`.`contractorProfileId` of type `UUID!`
+  """
+  contractorProfileId: UUID
+  """
+  ✨ `_expr` server value variant of `contractorProfileId` (✨ Generated from Field `ContractorService`.`contractorProfileId` of type `UUID!`)
+  """
+  contractorProfileId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `ContractorService`.`serviceId` of type `UUID!`
+  """
+  serviceId: UUID
+  """
+  ✨ `_expr` server value variant of `serviceId` (✨ Generated from Field `ContractorService`.`serviceId` of type `UUID!`)
+  """
+  serviceId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `ContractorService`.`contractorProfile` of type `ContractorProfile!`
+  """
+  contractorProfile: ContractorProfile_Key
+  """
+  ✨ Generated from Field `ContractorService`.`service` of type `Service!`
+  """
+  service: Service_Key
+  """
+  ✨ Generated from Field `ContractorService`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `ContractorService`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `ContractorService`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `ContractorService`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `ContractorService`.`specialization` of type `String`
+  """
+  specialization: String
+  """
+  ✨ `_expr` server value variant of `specialization` (✨ Generated from Field `ContractorService`.`specialization` of type `String`)
+  """
+  specialization_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'ContractorService'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input ContractorService_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [ContractorService_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: ContractorService_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [ContractorService_Filter!]
+  """
+  ✨ Generated from Field `ContractorService`.`contractorProfileId` of type `UUID!`
+  """
+  contractorProfileId: UUID_Filter
+  """
+  ✨ Generated from Field `ContractorService`.`serviceId` of type `UUID!`
+  """
+  serviceId: UUID_Filter
+  """
+  ✨ Generated from Field `ContractorService`.`contractorProfile` of type `ContractorProfile!`
+  """
+  contractorProfile: ContractorProfile_Filter
+  """
+  ✨ Generated from Field `ContractorService`.`service` of type `Service!`
+  """
+  service: Service_Filter
+  """
+  ✨ Generated from Field `ContractorService`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `ContractorService`.`specialization` of type `String`
+  """
+  specialization: String_Filter
+}
+"""
+✨ Generated first-row input type for table 'ContractorService'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input ContractorService_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [ContractorService_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: ContractorService_Filter
+}
+"""
+✨ Generated having input type for table 'ContractorService'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input ContractorService_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [ContractorService_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: ContractorService_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [ContractorService_Having!]
+  """
+  ✨ Generated from Field `ContractorService`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `ContractorService`.`contractorProfileId_count` of type `Int!`
+  """
+  contractorProfileId_count: Int_Filter
+  """
+  ✨ Generated from Field `ContractorService`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `ContractorService`.`serviceId_count` of type `Int!`
+  """
+  serviceId_count: Int_Filter
+  """
+  ✨ Generated from Field `ContractorService`.`specialization_count` of type `Int!`
+  """
+  specialization_count: Int_Filter
+  """
+  ✨ Generated from Field `ContractorService`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `ContractorService`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+}
+"""
+✨ Generated key input type for table 'ContractorService'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input ContractorService_Key {
+  """
+  ✨ Generated from Field `ContractorService`.`contractorProfileId` of type `UUID!`
+  """
+  contractorProfileId: UUID
+  """
+  ✨ `_expr` server value variant of `contractorProfileId` (✨ Generated from Field `ContractorService`.`contractorProfileId` of type `UUID!`)
+  """
+  contractorProfileId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `ContractorService`.`serviceId` of type `UUID!`
+  """
+  serviceId: UUID
+  """
+  ✨ `_expr` server value variant of `serviceId` (✨ Generated from Field `ContractorService`.`serviceId` of type `UUID!`)
+  """
+  serviceId_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'ContractorService'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input ContractorService_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: ContractorService_Filter
+}
+"""
+✨ Generated order input type for table 'ContractorService'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input ContractorService_Order {
+  """
+  ✨ Generated from Field `ContractorService`.`contractorProfileId` of type `UUID!`
+  """
+  contractorProfileId: OrderDirection
+  """
+  ✨ Generated from Field `ContractorService`.`serviceId` of type `UUID!`
+  """
+  serviceId: OrderDirection
+  """
+  ✨ Generated from Field `ContractorService`.`contractorProfile` of type `ContractorProfile!`
+  """
+  contractorProfile: ContractorProfile_Order
+  """
+  ✨ Generated from Field `ContractorService`.`service` of type `Service!`
+  """
+  service: Service_Order
+  """
+  ✨ Generated from Field `ContractorService`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `ContractorService`.`specialization` of type `String`
+  """
+  specialization: OrderDirection
+  """
+  ✨ Generated from Field `ContractorService`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `ContractorService`.`contractorProfileId_count` of type `Int!`
+  """
+  contractorProfileId_count: OrderDirection
+  """
+  ✨ Generated from Field `ContractorService`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `ContractorService`.`serviceId_count` of type `Int!`
+  """
+  serviceId_count: OrderDirection
+  """
+  ✨ Generated from Field `ContractorService`.`specialization_count` of type `Int!`
+  """
+  specialization_count: OrderDirection
+  """
+  ✨ Generated from Field `ContractorService`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `ContractorService`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'Project'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Project_Data {
+  """
+  ✨ Generated from Field `Project`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Project`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Project`.`clientId` of type `UUID`
+  """
+  clientId: UUID
+  """
+  ✨ `_expr` server value variant of `clientId` (✨ Generated from Field `Project`.`clientId` of type `UUID`)
+  """
+  clientId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Project`.`hiredContractorId` of type `UUID`
+  """
+  hiredContractorId: UUID
+  """
+  ✨ `_expr` server value variant of `hiredContractorId` (✨ Generated from Field `Project`.`hiredContractorId` of type `UUID`)
+  """
+  hiredContractorId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Project`.`client` of type `User`
+  """
+  client: User_Key
+  """
+  ✨ Generated from Field `Project`.`hiredContractor` of type `ContractorProfile`
+  """
+  hiredContractor: ContractorProfile_Key
+  """
+  ✨ Generated from Field `Project`.`budget` of type `Float`
+  """
+  budget: Float
+  """
+  ✨ `_expr` server value variant of `budget` (✨ Generated from Field `Project`.`budget` of type `Float`)
+  """
+  budget_expr: Float_Expr
+  """
+  ✨ `_update` server value variant of `budget` (✨ Generated from Field `Project`.`budget` of type `Float`)
+  """
+  budget_update: [Float_Update!]
+  """
+  ✨ Generated from Field `Project`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `Project`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `Project`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `Project`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `Project`.`description` of type `String!`
+  """
+  description: String
+  """
+  ✨ `_expr` server value variant of `description` (✨ Generated from Field `Project`.`description` of type `String!`)
+  """
+  description_expr: String_Expr
+  """
+  ✨ Generated from Field `Project`.`endDate` of type `Date`
+  """
+  endDate: Date
+  """
+  ✨ `_date` server value variant of `endDate` (✨ Generated from Field `Project`.`endDate` of type `Date`)
+  """
+  endDate_date: Date_Relative
+  """
+  ✨ `_expr` server value variant of `endDate` (✨ Generated from Field `Project`.`endDate` of type `Date`)
+  """
+  endDate_expr: Date_Expr
+  """
+  ✨ `_update` server value variant of `endDate` (✨ Generated from Field `Project`.`endDate` of type `Date`)
+  """
+  endDate_update: [Date_Update!]
+  """
+  ✨ Generated from Field `Project`.`location` of type `String!`
+  """
+  location: String
+  """
+  ✨ `_expr` server value variant of `location` (✨ Generated from Field `Project`.`location` of type `String!`)
+  """
+  location_expr: String_Expr
+  """
+  ✨ Generated from Field `Project`.`startDate` of type `Date`
+  """
+  startDate: Date
+  """
+  ✨ `_date` server value variant of `startDate` (✨ Generated from Field `Project`.`startDate` of type `Date`)
+  """
+  startDate_date: Date_Relative
+  """
+  ✨ `_expr` server value variant of `startDate` (✨ Generated from Field `Project`.`startDate` of type `Date`)
+  """
+  startDate_expr: Date_Expr
+  """
+  ✨ `_update` server value variant of `startDate` (✨ Generated from Field `Project`.`startDate` of type `Date`)
+  """
+  startDate_update: [Date_Update!]
+  """
+  ✨ Generated from Field `Project`.`status` of type `String!`
+  """
+  status: String
+  """
+  ✨ `_expr` server value variant of `status` (✨ Generated from Field `Project`.`status` of type `String!`)
+  """
+  status_expr: String_Expr
+  """
+  ✨ Generated from Field `Project`.`title` of type `String!`
+  """
+  title: String
+  """
+  ✨ `_expr` server value variant of `title` (✨ Generated from Field `Project`.`title` of type `String!`)
+  """
+  title_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'Project'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Project_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Project_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Project_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Project_Filter!]
+  """
+  ✨ Generated from Field `Project`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Project`.`clientId` of type `UUID`
+  """
+  clientId: UUID_Filter
+  """
+  ✨ Generated from Field `Project`.`hiredContractorId` of type `UUID`
+  """
+  hiredContractorId: UUID_Filter
+  """
+  ✨ Generated from Field `Project`.`client` of type `User`
+  """
+  client: User_Filter
+  """
+  ✨ Generated from Field `Project`.`hiredContractor` of type `ContractorProfile`
+  """
+  hiredContractor: ContractorProfile_Filter
+  """
+  ✨ Generated from Field `Project`.`budget` of type `Float`
+  """
+  budget: Float_Filter
+  """
+  ✨ Generated from Field `Project`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `Project`.`description` of type `String!`
+  """
+  description: String_Filter
+  """
+  ✨ Generated from Field `Project`.`endDate` of type `Date`
+  """
+  endDate: Date_Filter
+  """
+  ✨ Generated from Field `Project`.`location` of type `String!`
+  """
+  location: String_Filter
+  """
+  ✨ Generated from Field `Project`.`startDate` of type `Date`
+  """
+  startDate: Date_Filter
+  """
+  ✨ Generated from Field `Project`.`status` of type `String!`
+  """
+  status: String_Filter
+  """
+  ✨ Generated from Field `Project`.`title` of type `String!`
+  """
+  title: String_Filter
+  """
+  ✨ Generated from Field `Project`.`bids_on_project` of type `[Bid!]!`
+  """
+  bids_on_project: Bid_ListFilter
+  """
+  ✨ Generated from Field `Project`.`reviews_on_project` of type `[Review!]!`
+  """
+  reviews_on_project: Review_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'Project'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Project_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Project_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Project_Filter
+}
+"""
+✨ Generated having input type for table 'Project'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Project_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Project_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Project_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Project_Having!]
+  """
+  ✨ Generated from Field `Project`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Project`.`budget_count` of type `Int!`
+  """
+  budget_count: Int_Filter
+  """
+  ✨ Generated from Field `Project`.`clientId_count` of type `Int!`
+  """
+  clientId_count: Int_Filter
+  """
+  ✨ Generated from Field `Project`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `Project`.`description_count` of type `Int!`
+  """
+  description_count: Int_Filter
+  """
+  ✨ Generated from Field `Project`.`endDate_count` of type `Int!`
+  """
+  endDate_count: Int_Filter
+  """
+  ✨ Generated from Field `Project`.`hiredContractorId_count` of type `Int!`
+  """
+  hiredContractorId_count: Int_Filter
+  """
+  ✨ Generated from Field `Project`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Project`.`location_count` of type `Int!`
+  """
+  location_count: Int_Filter
+  """
+  ✨ Generated from Field `Project`.`startDate_count` of type `Int!`
+  """
+  startDate_count: Int_Filter
+  """
+  ✨ Generated from Field `Project`.`status_count` of type `Int!`
+  """
+  status_count: Int_Filter
+  """
+  ✨ Generated from Field `Project`.`title_count` of type `Int!`
+  """
+  title_count: Int_Filter
+  """
+  ✨ Generated from Field `Project`.`budget_sum` of type `Float`
+  """
+  budget_sum: Float_Filter
+  """
+  ✨ Generated from Field `Project`.`budget_avg` of type `Float`
+  """
+  budget_avg: Float_Filter
+  """
+  ✨ Generated from Field `Project`.`budget_min` of type `Float`
+  """
+  budget_min: Float_Filter
+  """
+  ✨ Generated from Field `Project`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `Project`.`endDate_min` of type `Date`
+  """
+  endDate_min: Date_Filter
+  """
+  ✨ Generated from Field `Project`.`startDate_min` of type `Date`
+  """
+  startDate_min: Date_Filter
+  """
+  ✨ Generated from Field `Project`.`budget_max` of type `Float`
+  """
+  budget_max: Float_Filter
+  """
+  ✨ Generated from Field `Project`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+  """
+  ✨ Generated from Field `Project`.`endDate_max` of type `Date`
+  """
+  endDate_max: Date_Filter
+  """
+  ✨ Generated from Field `Project`.`startDate_max` of type `Date`
+  """
+  startDate_max: Date_Filter
+}
+"""
+✨ Generated key input type for table 'Project'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Project_Key {
+  """
+  ✨ Generated from Field `Project`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Project`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'Project'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Project_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Project_Filter
+}
+"""
+✨ Generated order input type for table 'Project'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Project_Order {
+  """
+  ✨ Generated from Field `Project`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`clientId` of type `UUID`
+  """
+  clientId: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`hiredContractorId` of type `UUID`
+  """
+  hiredContractorId: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`client` of type `User`
+  """
+  client: User_Order
+  """
+  ✨ Generated from Field `Project`.`hiredContractor` of type `ContractorProfile`
+  """
+  hiredContractor: ContractorProfile_Order
+  """
+  ✨ Generated from Field `Project`.`budget` of type `Float`
+  """
+  budget: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`description` of type `String!`
+  """
+  description: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`endDate` of type `Date`
+  """
+  endDate: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`location` of type `String!`
+  """
+  location: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`startDate` of type `Date`
+  """
+  startDate: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`status` of type `String!`
+  """
+  status: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`title` of type `String!`
+  """
+  title: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`budget_count` of type `Int!`
+  """
+  budget_count: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`clientId_count` of type `Int!`
+  """
+  clientId_count: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`description_count` of type `Int!`
+  """
+  description_count: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`endDate_count` of type `Int!`
+  """
+  endDate_count: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`hiredContractorId_count` of type `Int!`
+  """
+  hiredContractorId_count: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`location_count` of type `Int!`
+  """
+  location_count: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`startDate_count` of type `Int!`
+  """
+  startDate_count: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`status_count` of type `Int!`
+  """
+  status_count: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`title_count` of type `Int!`
+  """
+  title_count: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`budget_sum` of type `Float`
+  """
+  budget_sum: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`budget_avg` of type `Float`
+  """
+  budget_avg: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`budget_min` of type `Float`
+  """
+  budget_min: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`endDate_min` of type `Date`
+  """
+  endDate_min: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`startDate_min` of type `Date`
+  """
+  startDate_min: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`budget_max` of type `Float`
+  """
+  budget_max: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`endDate_max` of type `Date`
+  """
+  endDate_max: OrderDirection
+  """
+  ✨ Generated from Field `Project`.`startDate_max` of type `Date`
+  """
+  startDate_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'Review'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Review_Data {
+  """
+  ✨ Generated from Field `Review`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Review`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Review`.`clientId` of type `UUID`
+  """
+  clientId: UUID
+  """
+  ✨ `_expr` server value variant of `clientId` (✨ Generated from Field `Review`.`clientId` of type `UUID`)
+  """
+  clientId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Review`.`contractorProfileId` of type `UUID`
+  """
+  contractorProfileId: UUID
+  """
+  ✨ `_expr` server value variant of `contractorProfileId` (✨ Generated from Field `Review`.`contractorProfileId` of type `UUID`)
+  """
+  contractorProfileId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Review`.`projectId` of type `UUID`
+  """
+  projectId: UUID
+  """
+  ✨ `_expr` server value variant of `projectId` (✨ Generated from Field `Review`.`projectId` of type `UUID`)
+  """
+  projectId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Review`.`client` of type `User`
+  """
+  client: User_Key
+  """
+  ✨ Generated from Field `Review`.`contractorProfile` of type `ContractorProfile`
+  """
+  contractorProfile: ContractorProfile_Key
+  """
+  ✨ Generated from Field `Review`.`project` of type `Project`
+  """
+  project: Project_Key
+  """
+  ✨ Generated from Field `Review`.`comment` of type `String`
+  """
+  comment: String
+  """
+  ✨ `_expr` server value variant of `comment` (✨ Generated from Field `Review`.`comment` of type `String`)
+  """
+  comment_expr: String_Expr
+  """
+  ✨ Generated from Field `Review`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `Review`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `Review`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `Review`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `Review`.`rating` of type `Int!`
+  """
+  rating: Int
+  """
+  ✨ `_expr` server value variant of `rating` (✨ Generated from Field `Review`.`rating` of type `Int!`)
+  """
+  rating_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `rating` (✨ Generated from Field `Review`.`rating` of type `Int!`)
+  """
+  rating_update: [Int_Update!]
+}
+"""
+✨ Generated filter input type for table 'Review'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Review_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Review_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Review_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Review_Filter!]
+  """
+  ✨ Generated from Field `Review`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Review`.`clientId` of type `UUID`
+  """
+  clientId: UUID_Filter
+  """
+  ✨ Generated from Field `Review`.`contractorProfileId` of type `UUID`
+  """
+  contractorProfileId: UUID_Filter
+  """
+  ✨ Generated from Field `Review`.`projectId` of type `UUID`
+  """
+  projectId: UUID_Filter
+  """
+  ✨ Generated from Field `Review`.`client` of type `User`
+  """
+  client: User_Filter
+  """
+  ✨ Generated from Field `Review`.`contractorProfile` of type `ContractorProfile`
+  """
+  contractorProfile: ContractorProfile_Filter
+  """
+  ✨ Generated from Field `Review`.`project` of type `Project`
+  """
+  project: Project_Filter
+  """
+  ✨ Generated from Field `Review`.`comment` of type `String`
+  """
+  comment: String_Filter
+  """
+  ✨ Generated from Field `Review`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `Review`.`rating` of type `Int!`
+  """
+  rating: Int_Filter
+}
+"""
+✨ Generated first-row input type for table 'Review'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Review_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Review_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Review_Filter
+}
+"""
+✨ Generated having input type for table 'Review'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Review_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Review_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Review_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Review_Having!]
+  """
+  ✨ Generated from Field `Review`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Review`.`clientId_count` of type `Int!`
+  """
+  clientId_count: Int_Filter
+  """
+  ✨ Generated from Field `Review`.`comment_count` of type `Int!`
+  """
+  comment_count: Int_Filter
+  """
+  ✨ Generated from Field `Review`.`contractorProfileId_count` of type `Int!`
+  """
+  contractorProfileId_count: Int_Filter
+  """
+  ✨ Generated from Field `Review`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `Review`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Review`.`projectId_count` of type `Int!`
+  """
+  projectId_count: Int_Filter
+  """
+  ✨ Generated from Field `Review`.`rating_count` of type `Int!`
+  """
+  rating_count: Int_Filter
+  """
+  ✨ Generated from Field `Review`.`rating_sum` of type `Int`
+  """
+  rating_sum: Int_Filter
+  """
+  ✨ Generated from Field `Review`.`rating_avg` of type `Float`
+  """
+  rating_avg: Float_Filter
+  """
+  ✨ Generated from Field `Review`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `Review`.`rating_min` of type `Int`
+  """
+  rating_min: Int_Filter
+  """
+  ✨ Generated from Field `Review`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+  """
+  ✨ Generated from Field `Review`.`rating_max` of type `Int`
+  """
+  rating_max: Int_Filter
+}
+"""
+✨ Generated key input type for table 'Review'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Review_Key {
+  """
+  ✨ Generated from Field `Review`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Review`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'Review'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Review_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Review_Filter
+}
+"""
+✨ Generated order input type for table 'Review'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Review_Order {
+  """
+  ✨ Generated from Field `Review`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Review`.`clientId` of type `UUID`
+  """
+  clientId: OrderDirection
+  """
+  ✨ Generated from Field `Review`.`contractorProfileId` of type `UUID`
+  """
+  contractorProfileId: OrderDirection
+  """
+  ✨ Generated from Field `Review`.`projectId` of type `UUID`
+  """
+  projectId: OrderDirection
+  """
+  ✨ Generated from Field `Review`.`client` of type `User`
+  """
+  client: User_Order
+  """
+  ✨ Generated from Field `Review`.`contractorProfile` of type `ContractorProfile`
+  """
+  contractorProfile: ContractorProfile_Order
+  """
+  ✨ Generated from Field `Review`.`project` of type `Project`
+  """
+  project: Project_Order
+  """
+  ✨ Generated from Field `Review`.`comment` of type `String`
+  """
+  comment: OrderDirection
+  """
+  ✨ Generated from Field `Review`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `Review`.`rating` of type `Int!`
+  """
+  rating: OrderDirection
+  """
+  ✨ Generated from Field `Review`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Review`.`clientId_count` of type `Int!`
+  """
+  clientId_count: OrderDirection
+  """
+  ✨ Generated from Field `Review`.`comment_count` of type `Int!`
+  """
+  comment_count: OrderDirection
+  """
+  ✨ Generated from Field `Review`.`contractorProfileId_count` of type `Int!`
+  """
+  contractorProfileId_count: OrderDirection
+  """
+  ✨ Generated from Field `Review`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `Review`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Review`.`projectId_count` of type `Int!`
+  """
+  projectId_count: OrderDirection
+  """
+  ✨ Generated from Field `Review`.`rating_count` of type `Int!`
+  """
+  rating_count: OrderDirection
+  """
+  ✨ Generated from Field `Review`.`rating_sum` of type `Int`
+  """
+  rating_sum: OrderDirection
+  """
+  ✨ Generated from Field `Review`.`rating_avg` of type `Float`
+  """
+  rating_avg: OrderDirection
+  """
+  ✨ Generated from Field `Review`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `Review`.`rating_min` of type `Int`
+  """
+  rating_min: OrderDirection
+  """
+  ✨ Generated from Field `Review`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+  """
+  ✨ Generated from Field `Review`.`rating_max` of type `Int`
+  """
+  rating_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'Service'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Service_Data {
+  """
+  ✨ Generated from Field `Service`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Service`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Service`.`description` of type `String!`
+  """
+  description: String
+  """
+  ✨ `_expr` server value variant of `description` (✨ Generated from Field `Service`.`description` of type `String!`)
+  """
+  description_expr: String_Expr
+  """
+  ✨ Generated from Field `Service`.`iconUrl` of type `String`
+  """
+  iconUrl: String
+  """
+  ✨ `_expr` server value variant of `iconUrl` (✨ Generated from Field `Service`.`iconUrl` of type `String`)
+  """
+  iconUrl_expr: String_Expr
+  """
+  ✨ Generated from Field `Service`.`name` of type `String!`
+  """
+  name: String
+  """
+  ✨ `_expr` server value variant of `name` (✨ Generated from Field `Service`.`name` of type `String!`)
+  """
+  name_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'Service'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Service_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Service_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Service_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Service_Filter!]
+  """
+  ✨ Generated from Field `Service`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Service`.`description` of type `String!`
+  """
+  description: String_Filter
+  """
+  ✨ Generated from Field `Service`.`iconUrl` of type `String`
+  """
+  iconUrl: String_Filter
+  """
+  ✨ Generated from Field `Service`.`name` of type `String!`
+  """
+  name: String_Filter
+  """
+  ✨ Generated from Field `Service`.`contractorServices_on_service` of type `[ContractorService!]!`
+  """
+  contractorServices_on_service: ContractorService_ListFilter
+  """
+  ✨ Generated from Field `Service`.`contractorProfiles_via_ContractorService` of type `[ContractorProfile!]!`
+  """
+  contractorProfiles_via_ContractorService: ContractorProfile_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'Service'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Service_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Service_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Service_Filter
+}
+"""
+✨ Generated having input type for table 'Service'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Service_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Service_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Service_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Service_Having!]
+  """
+  ✨ Generated from Field `Service`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Service`.`description_count` of type `Int!`
+  """
+  description_count: Int_Filter
+  """
+  ✨ Generated from Field `Service`.`iconUrl_count` of type `Int!`
+  """
+  iconUrl_count: Int_Filter
+  """
+  ✨ Generated from Field `Service`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Service`.`name_count` of type `Int!`
+  """
+  name_count: Int_Filter
+}
+"""
+✨ Generated key input type for table 'Service'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Service_Key {
+  """
+  ✨ Generated from Field `Service`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Service`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'Service'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Service_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Service_Filter
+}
+"""
+✨ Generated order input type for table 'Service'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Service_Order {
+  """
+  ✨ Generated from Field `Service`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Service`.`description` of type `String!`
+  """
+  description: OrderDirection
+  """
+  ✨ Generated from Field `Service`.`iconUrl` of type `String`
+  """
+  iconUrl: OrderDirection
+  """
+  ✨ Generated from Field `Service`.`name` of type `String!`
+  """
+  name: OrderDirection
+  """
+  ✨ Generated from Field `Service`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `Service`.`description_count` of type `Int!`
+  """
+  description_count: OrderDirection
+  """
+  ✨ Generated from Field `Service`.`iconUrl_count` of type `Int!`
+  """
+  iconUrl_count: OrderDirection
+  """
+  ✨ Generated from Field `Service`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `Service`.`name_count` of type `Int!`
+  """
+  name_count: OrderDirection
+}
+"""
+✨ Generated data input type for table 'User'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input User_Data {
+  """
+  ✨ Generated from Field `User`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `User`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `User`.`accountType` of type `String!`
+  """
+  accountType: String
+  """
+  ✨ `_expr` server value variant of `accountType` (✨ Generated from Field `User`.`accountType` of type `String!`)
+  """
+  accountType_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`companyName` of type `String`
+  """
+  companyName: String
+  """
+  ✨ `_expr` server value variant of `companyName` (✨ Generated from Field `User`.`companyName` of type `String`)
+  """
+  companyName_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `User`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `User`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `User`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `User`.`email` of type `String!`
+  """
+  email: String
+  """
+  ✨ `_expr` server value variant of `email` (✨ Generated from Field `User`.`email` of type `String!`)
+  """
+  email_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`firstName` of type `String`
+  """
+  firstName: String
+  """
+  ✨ `_expr` server value variant of `firstName` (✨ Generated from Field `User`.`firstName` of type `String`)
+  """
+  firstName_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`lastName` of type `String`
+  """
+  lastName: String
+  """
+  ✨ `_expr` server value variant of `lastName` (✨ Generated from Field `User`.`lastName` of type `String`)
+  """
+  lastName_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`passwordHash` of type `String!`
+  """
+  passwordHash: String
+  """
+  ✨ `_expr` server value variant of `passwordHash` (✨ Generated from Field `User`.`passwordHash` of type `String!`)
+  """
+  passwordHash_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`phoneNumber` of type `String`
+  """
+  phoneNumber: String
+  """
+  ✨ `_expr` server value variant of `phoneNumber` (✨ Generated from Field `User`.`phoneNumber` of type `String`)
+  """
+  phoneNumber_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`profilePictureUrl` of type `String`
+  """
+  profilePictureUrl: String
+  """
+  ✨ `_expr` server value variant of `profilePictureUrl` (✨ Generated from Field `User`.`profilePictureUrl` of type `String`)
+  """
+  profilePictureUrl_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'User'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input User_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [User_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: User_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [User_Filter!]
+  """
+  ✨ Generated from Field `User`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `User`.`accountType` of type `String!`
+  """
+  accountType: String_Filter
+  """
+  ✨ Generated from Field `User`.`companyName` of type `String`
+  """
+  companyName: String_Filter
+  """
+  ✨ Generated from Field `User`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `User`.`email` of type `String!`
+  """
+  email: String_Filter
+  """
+  ✨ Generated from Field `User`.`firstName` of type `String`
+  """
+  firstName: String_Filter
+  """
+  ✨ Generated from Field `User`.`lastName` of type `String`
+  """
+  lastName: String_Filter
+  """
+  ✨ Generated from Field `User`.`passwordHash` of type `String!`
+  """
+  passwordHash: String_Filter
+  """
+  ✨ Generated from Field `User`.`phoneNumber` of type `String`
+  """
+  phoneNumber: String_Filter
+  """
+  ✨ Generated from Field `User`.`profilePictureUrl` of type `String`
+  """
+  profilePictureUrl: String_Filter
+  """
+  ✨ Generated from Field `User`.`contractorProfiles_on_user` of type `[ContractorProfile!]!`
+  """
+  contractorProfiles_on_user: ContractorProfile_ListFilter
+  """
+  ✨ Generated from Field `User`.`projects_on_client` of type `[Project!]!`
+  """
+  projects_on_client: Project_ListFilter
+  """
+  ✨ Generated from Field `User`.`reviews_on_client` of type `[Review!]!`
+  """
+  reviews_on_client: Review_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'User'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input User_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [User_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: User_Filter
+}
+"""
+✨ Generated having input type for table 'User'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input User_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [User_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: User_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [User_Having!]
+  """
+  ✨ Generated from Field `User`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`accountType_count` of type `Int!`
+  """
+  accountType_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`companyName_count` of type `Int!`
+  """
+  companyName_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`email_count` of type `Int!`
+  """
+  email_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`firstName_count` of type `Int!`
+  """
+  firstName_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`lastName_count` of type `Int!`
+  """
+  lastName_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`passwordHash_count` of type `Int!`
+  """
+  passwordHash_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`phoneNumber_count` of type `Int!`
+  """
+  phoneNumber_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`profilePictureUrl_count` of type `Int!`
+  """
+  profilePictureUrl_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `User`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+}
+"""
+✨ Generated key input type for table 'User'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input User_Key {
+  """
+  ✨ Generated from Field `User`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `User`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'User'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input User_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: User_Filter
+}
+"""
+✨ Generated order input type for table 'User'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input User_Order {
+  """
+  ✨ Generated from Field `User`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `User`.`accountType` of type `String!`
+  """
+  accountType: OrderDirection
+  """
+  ✨ Generated from Field `User`.`companyName` of type `String`
+  """
+  companyName: OrderDirection
+  """
+  ✨ Generated from Field `User`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `User`.`email` of type `String!`
+  """
+  email: OrderDirection
+  """
+  ✨ Generated from Field `User`.`firstName` of type `String`
+  """
+  firstName: OrderDirection
+  """
+  ✨ Generated from Field `User`.`lastName` of type `String`
+  """
+  lastName: OrderDirection
+  """
+  ✨ Generated from Field `User`.`passwordHash` of type `String!`
+  """
+  passwordHash: OrderDirection
+  """
+  ✨ Generated from Field `User`.`phoneNumber` of type `String`
+  """
+  phoneNumber: OrderDirection
+  """
+  ✨ Generated from Field `User`.`profilePictureUrl` of type `String`
+  """
+  profilePictureUrl: OrderDirection
+  """
+  ✨ Generated from Field `User`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`accountType_count` of type `Int!`
+  """
+  accountType_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`companyName_count` of type `Int!`
+  """
+  companyName_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`email_count` of type `Int!`
+  """
+  email_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`firstName_count` of type `Int!`
+  """
+  firstName_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`lastName_count` of type `Int!`
+  """
+  lastName_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`passwordHash_count` of type `Int!`
+  """
+  passwordHash_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`phoneNumber_count` of type `Int!`
+  """
+  phoneNumber_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`profilePictureUrl_count` of type `Int!`
+  """
+  profilePictureUrl_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `User`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+}

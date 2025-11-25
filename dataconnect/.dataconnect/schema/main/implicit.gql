@@ -1,0 +1,78 @@
+extend type Bid {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Bid", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Bid`.`contractorProfile`. It must match the value of `ContractorProfile`.`id`. See `@ref` for how to customize it.
+  """
+  contractorProfileId: UUID @fdc_generated(from: "Bid.contractorProfile", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Bid`.`project`. It must match the value of `Project`.`id`. See `@ref` for how to customize it.
+  """
+  projectId: UUID @fdc_generated(from: "Bid.project", purpose: IMPLICIT_REF_FIELD)
+}
+extend type ContractorProfile {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "ContractorProfile", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `ContractorProfile`.`user`. It must match the value of `User`.`id`. See `@ref` for how to customize it.
+  """
+  userId: UUID @fdc_generated(from: "ContractorProfile.user", purpose: IMPLICIT_REF_FIELD)
+}
+extend type ContractorService {
+  """
+  ✨ Implicit foreign key field based on `ContractorService`.`contractorProfile`. It must match the value of `ContractorProfile`.`id`. See `@ref` for how to customize it.
+  """
+  contractorProfileId: UUID! @fdc_generated(from: "ContractorService.contractorProfile", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `ContractorService`.`service`. It must match the value of `Service`.`id`. See `@ref` for how to customize it.
+  """
+  serviceId: UUID! @fdc_generated(from: "ContractorService.service", purpose: IMPLICIT_REF_FIELD)
+}
+extend type Project {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Project", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Project`.`client`. It must match the value of `User`.`id`. See `@ref` for how to customize it.
+  """
+  clientId: UUID @fdc_generated(from: "Project.client", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Project`.`hiredContractor`. It must match the value of `ContractorProfile`.`id`. See `@ref` for how to customize it.
+  """
+  hiredContractorId: UUID @fdc_generated(from: "Project.hiredContractor", purpose: IMPLICIT_REF_FIELD)
+}
+extend type Review {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Review", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Review`.`client`. It must match the value of `User`.`id`. See `@ref` for how to customize it.
+  """
+  clientId: UUID @fdc_generated(from: "Review.client", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Review`.`contractorProfile`. It must match the value of `ContractorProfile`.`id`. See `@ref` for how to customize it.
+  """
+  contractorProfileId: UUID @fdc_generated(from: "Review.contractorProfile", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Review`.`project`. It must match the value of `Project`.`id`. See `@ref` for how to customize it.
+  """
+  projectId: UUID @fdc_generated(from: "Review.project", purpose: IMPLICIT_REF_FIELD)
+}
+extend type Service {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Service", purpose: IMPLICIT_KEY_FIELD)
+}
+extend type User {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "User", purpose: IMPLICIT_KEY_FIELD)
+}

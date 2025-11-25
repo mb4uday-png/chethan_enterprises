@@ -1,0 +1,711 @@
+[debug] [2025-11-25T08:37:59.277Z] ----------------------------------------------------------------------
+[debug] [2025-11-25T08:37:59.279Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hello pc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js projects:list
+[debug] [2025-11-25T08:37:59.280Z] CLI Version:   14.26.0
+[debug] [2025-11-25T08:37:59.280Z] Platform:      win32
+[debug] [2025-11-25T08:37:59.280Z] Node Version:  v25.2.1
+[debug] [2025-11-25T08:37:59.280Z] Time:          Tue Nov 25 2025 14:07:59 GMT+0530 (India Standard Time)
+[debug] [2025-11-25T08:37:59.280Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-11-25T08:37:59.282Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-11-25T08:37:59.322Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T08:37:59.323Z] > authorizing via signed-in user (mb4uday@gmail.com)
+[debug] [2025-11-25T08:37:59.331Z] Checked if tokens are valid: false, expires at: 1764058461490
+[debug] [2025-11-25T08:37:59.332Z] Checked if tokens are valid: false, expires at: 1764058461490
+[debug] [2025-11-25T08:37:59.332Z] > refreshing access token with scopes: []
+[debug] [2025-11-25T08:37:59.334Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-25T08:37:59.334Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T08:37:59.561Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-25T08:37:59.561Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T08:37:59.573Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2025-11-25T08:37:59.922Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-11-25T08:37:59.922Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2025-11-25T08:38:00.580Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-11-25T08:38:00.580Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] ┌──────────────────────┬───────────────────────────────┬────────────────┬──────────────────────┐
+│ Project Display Name │ Project ID                    │ Project Number │ Resource Location ID │
+├──────────────────────┼───────────────────────────────┼────────────────┼──────────────────────┤
+│ CEApp                │ ceapp-serv                    │ 637503757230   │ [Not specified]      │
+├──────────────────────┼───────────────────────────────┼────────────────┼──────────────────────┤
+│ chethanenterprises   │ chethan-enterprises           │ 1019834486303  │ [Not specified]      │
+├──────────────────────┼───────────────────────────────┼────────────────┼──────────────────────┤
+│ chthanwebpage        │ chethanenterprises-5f066-1220 │ 586468469812   │ [Not specified]      │
+├──────────────────────┼───────────────────────────────┼────────────────┼──────────────────────┤
+│ mywebapp8999p        │ mywebapp8999p                 │ 695890670437   │ [Not specified]      │
+└──────────────────────┴───────────────────────────────┴────────────────┴──────────────────────┘
+[info] 
+[info] 4 project(s) total.
+[debug] [2025-11-25T08:39:01.717Z] ----------------------------------------------------------------------
+[debug] [2025-11-25T08:39:01.720Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hello pc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2025-11-25T08:39:01.720Z] CLI Version:   14.26.0
+[debug] [2025-11-25T08:39:01.720Z] Platform:      win32
+[debug] [2025-11-25T08:39:01.720Z] Node Version:  v25.2.1
+[debug] [2025-11-25T08:39:01.721Z] Time:          Tue Nov 25 2025 14:09:01 GMT+0530 (India Standard Time)
+[debug] [2025-11-25T08:39:01.721Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  d:\user data\Documents\CE
+
+[debug] [2025-11-25T08:39:12.747Z] ----------------------------------------------------------------------
+[debug] [2025-11-25T08:39:12.749Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hello pc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2025-11-25T08:39:12.750Z] CLI Version:   14.26.0
+[debug] [2025-11-25T08:39:12.750Z] Platform:      win32
+[debug] [2025-11-25T08:39:12.751Z] Node Version:  v25.2.1
+[debug] [2025-11-25T08:39:12.751Z] Time:          Tue Nov 25 2025 14:09:12 GMT+0530 (India Standard Time)
+[debug] [2025-11-25T08:39:12.751Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  d:\user data\Documents\CE
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[info] No default project found. Continuing without a project in non interactive mode.
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2025-11-25T08:54:33.449Z] ----------------------------------------------------------------------
+[debug] [2025-11-25T08:54:33.452Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hello pc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2025-11-25T08:54:33.452Z] CLI Version:   14.26.0
+[debug] [2025-11-25T08:54:33.452Z] Platform:      win32
+[debug] [2025-11-25T08:54:33.452Z] Node Version:  v25.2.1
+[debug] [2025-11-25T08:54:33.452Z] Time:          Tue Nov 25 2025 14:24:33 GMT+0530 (India Standard Time)
+[debug] [2025-11-25T08:54:33.452Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  d:\user data\Documents\CE
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[info] No default project found. Continuing without a project in non interactive mode.
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2025-11-25T08:55:18.591Z] ----------------------------------------------------------------------
+[debug] [2025-11-25T08:55:18.593Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hello pc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2025-11-25T08:55:18.594Z] CLI Version:   14.26.0
+[debug] [2025-11-25T08:55:18.594Z] Platform:      win32
+[debug] [2025-11-25T08:55:18.594Z] Node Version:  v25.2.1
+[debug] [2025-11-25T08:55:18.594Z] Time:          Tue Nov 25 2025 14:25:18 GMT+0530 (India Standard Time)
+[debug] [2025-11-25T08:55:18.594Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-11-25T08:55:18.813Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T08:55:18.814Z] > authorizing via signed-in user (mb4uday@gmail.com)
+[debug] [2025-11-25T08:55:18.815Z] [iam] checking project ceapp-serv for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-11-25T08:55:18.817Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T08:55:18.819Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T08:55:18.822Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions [none]
+[debug] [2025-11-25T08:55:18.822Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions x-goog-quota-user=projects/ceapp-serv
+[debug] [2025-11-25T08:55:18.822Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-11-25T08:55:20.619Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions 200
+[debug] [2025-11-25T08:55:20.619Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-11-25T08:55:20.620Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T08:55:20.620Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T08:55:20.620Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ceapp-serv [none]
+[debug] [2025-11-25T08:55:21.112Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ceapp-serv 200
+[debug] [2025-11-25T08:55:21.112Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ceapp-serv {"projectId":"ceapp-serv","projectNumber":"637503757230","displayName":"CEApp","name":"projects/ceapp-serv","resources":{"hostingSite":"ceapp-serv"},"state":"ACTIVE","etag":"1_2e9851fe-331f-4658-8ba3-6228c752a134"}
+[info] 
+[info] === Deploying to 'ceapp-serv'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-11-25T08:55:21.117Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T08:55:21.117Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T08:55:21.117Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/versions [none]
+[debug] [2025-11-25T08:55:21.117Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-11-25T08:55:23.088Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/versions 200
+[debug] [2025-11-25T08:55:23.088Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/versions {"name":"projects/637503757230/sites/ceapp-serv/versions/343543f2e02dc5a8","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[ceapp-serv]: beginning deploy... 
+[info] i  hosting[ceapp-serv]: found 5 files in CEApp/dist 
+[debug] [2025-11-25T08:55:23.106Z] [hosting] uploading with 200 concurrency
+[debug] [2025-11-25T08:55:23.107Z] [hosting] hash cache [Q0VBcHBcZGlzdA] not populated
+[debug] [2025-11-25T08:55:23.193Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T08:55:23.193Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T08:55:23.194Z] [hosting] hash cache [Q0VBcHBcZGlzdA] stored for 5 files
+[debug] [2025-11-25T08:55:23.194Z] [hosting][hash queue][FINAL] {"max":83,"min":4,"avg":20.4,"active":0,"complete":5,"success":5,"errored":0,"retried":0,"total":5,"elapsed":86}
+[debug] [2025-11-25T08:55:23.195Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/637503757230/sites/ceapp-serv/versions/343543f2e02dc5a8:populateFiles [none]
+[debug] [2025-11-25T08:55:23.195Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/637503757230/sites/ceapp-serv/versions/343543f2e02dc5a8:populateFiles {"files":{"/metadata.json":"59607d4abc28dbe25c04810f4160b1e785f320a28d51d4caf80c70367ec8b978","/favicon.ico":"852bd579b4b43ed53cf18cce401ec9cdf72f0953afddcd5f234b3a5cd5e780df","/index.html":"7eb208e979c84ff89b71bcaa7a8da279faae9c51495062b55a473cb566bb0e6e","/_expo/static/css/styles-b24d912070d2078785f6f7c34da03f59.css":"439d8b58c38dbe8b14184943c60b3909c6794aa29a430c1cd34e3315af29ce94","/_expo/static/js/web/index-3eacc057934967e8b2cffd3c6851f44f.js":"261810de709f2991468cbc1d0a0d262dd7b12d154cb3de574821bb040db0fbe5"}}
+[debug] [2025-11-25T08:55:23.772Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/637503757230/sites/ceapp-serv/versions/343543f2e02dc5a8:populateFiles 200
+[debug] [2025-11-25T08:55:23.773Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/637503757230/sites/ceapp-serv/versions/343543f2e02dc5a8:populateFiles {"uploadRequiredHashes":["59607d4abc28dbe25c04810f4160b1e785f320a28d51d4caf80c70367ec8b978","852bd579b4b43ed53cf18cce401ec9cdf72f0953afddcd5f234b3a5cd5e780df","7eb208e979c84ff89b71bcaa7a8da279faae9c51495062b55a473cb566bb0e6e","439d8b58c38dbe8b14184943c60b3909c6794aa29a430c1cd34e3315af29ce94","261810de709f2991468cbc1d0a0d262dd7b12d154cb3de574821bb040db0fbe5"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/343543f2e02dc5a8/files"}
+[debug] [2025-11-25T08:55:23.773Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T08:55:23.774Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T08:55:23.774Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T08:55:23.774Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T08:55:23.774Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T08:55:23.774Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T08:55:23.775Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T08:55:23.775Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T08:55:23.775Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T08:55:23.775Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T08:55:23.775Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/343543f2e02dc5a8/files/59607d4abc28dbe25c04810f4160b1e785f320a28d51d4caf80c70367ec8b978 [none]
+[debug] [2025-11-25T08:55:23.775Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/343543f2e02dc5a8/files/59607d4abc28dbe25c04810f4160b1e785f320a28d51d4caf80c70367ec8b978 [stream]
+[debug] [2025-11-25T08:55:23.777Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/343543f2e02dc5a8/files/852bd579b4b43ed53cf18cce401ec9cdf72f0953afddcd5f234b3a5cd5e780df [none]
+[debug] [2025-11-25T08:55:23.777Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/343543f2e02dc5a8/files/852bd579b4b43ed53cf18cce401ec9cdf72f0953afddcd5f234b3a5cd5e780df [stream]
+[debug] [2025-11-25T08:55:23.778Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/343543f2e02dc5a8/files/7eb208e979c84ff89b71bcaa7a8da279faae9c51495062b55a473cb566bb0e6e [none]
+[debug] [2025-11-25T08:55:23.778Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/343543f2e02dc5a8/files/7eb208e979c84ff89b71bcaa7a8da279faae9c51495062b55a473cb566bb0e6e [stream]
+[debug] [2025-11-25T08:55:23.779Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/343543f2e02dc5a8/files/439d8b58c38dbe8b14184943c60b3909c6794aa29a430c1cd34e3315af29ce94 [none]
+[debug] [2025-11-25T08:55:23.780Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/343543f2e02dc5a8/files/439d8b58c38dbe8b14184943c60b3909c6794aa29a430c1cd34e3315af29ce94 [stream]
+[debug] [2025-11-25T08:55:23.781Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/343543f2e02dc5a8/files/261810de709f2991468cbc1d0a0d262dd7b12d154cb3de574821bb040db0fbe5 [none]
+[debug] [2025-11-25T08:55:23.781Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/343543f2e02dc5a8/files/261810de709f2991468cbc1d0a0d262dd7b12d154cb3de574821bb040db0fbe5 [stream]
+[debug] [2025-11-25T08:55:23.782Z] [hosting][populate queue][FINAL] {"max":583,"min":583,"avg":583,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":590}
+[debug] [2025-11-25T08:55:23.783Z] [hosting] uploads queued: 5
+[info] i  hosting: uploading new files [0/5] (0%) 
+[debug] [2025-11-25T08:55:25.689Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/343543f2e02dc5a8/files/59607d4abc28dbe25c04810f4160b1e785f320a28d51d4caf80c70367ec8b978 200
+[debug] [2025-11-25T08:55:25.689Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/343543f2e02dc5a8/files/59607d4abc28dbe25c04810f4160b1e785f320a28d51d4caf80c70367ec8b978 [stream]
+[debug] [2025-11-25T08:55:25.795Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/343543f2e02dc5a8/files/852bd579b4b43ed53cf18cce401ec9cdf72f0953afddcd5f234b3a5cd5e780df 200
+[debug] [2025-11-25T08:55:25.796Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/343543f2e02dc5a8/files/852bd579b4b43ed53cf18cce401ec9cdf72f0953afddcd5f234b3a5cd5e780df [stream]
+[debug] [2025-11-25T08:55:25.797Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/343543f2e02dc5a8/files/7eb208e979c84ff89b71bcaa7a8da279faae9c51495062b55a473cb566bb0e6e 200
+[debug] [2025-11-25T08:55:25.797Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/343543f2e02dc5a8/files/7eb208e979c84ff89b71bcaa7a8da279faae9c51495062b55a473cb566bb0e6e [stream]
+[debug] [2025-11-25T08:55:25.861Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/343543f2e02dc5a8/files/261810de709f2991468cbc1d0a0d262dd7b12d154cb3de574821bb040db0fbe5 200
+[debug] [2025-11-25T08:55:25.861Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/343543f2e02dc5a8/files/261810de709f2991468cbc1d0a0d262dd7b12d154cb3de574821bb040db0fbe5 [stream]
+[debug] [2025-11-25T08:55:26.227Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/343543f2e02dc5a8/files/439d8b58c38dbe8b14184943c60b3909c6794aa29a430c1cd34e3315af29ce94 200
+[debug] [2025-11-25T08:55:26.227Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/343543f2e02dc5a8/files/439d8b58c38dbe8b14184943c60b3909c6794aa29a430c1cd34e3315af29ce94 [stream]
+[debug] [2025-11-25T08:55:26.228Z] [hosting][upload queue][FINAL] {"max":2453,"min":1916,"avg":2100,"active":0,"complete":5,"success":5,"errored":0,"retried":0,"total":5,"elapsed":2455}
+[info] i  hosting: upload complete 
+[info] +  hosting[ceapp-serv]: file upload complete 
+[debug] [2025-11-25T08:55:26.228Z] [hosting] deploy completed after 3137ms
+[debug] [2025-11-25T08:55:26.228Z] [
+  {
+    "config": {
+      "public": "CEApp/dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "ceapp-serv"
+    },
+    "version": "projects/637503757230/sites/ceapp-serv/versions/343543f2e02dc5a8"
+  }
+]
+[info] i  hosting[ceapp-serv]: finalizing version... 
+[debug] [2025-11-25T08:55:26.230Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T08:55:26.230Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T08:55:26.230Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/versions/343543f2e02dc5a8 updateMask=status%2Cconfig
+[debug] [2025-11-25T08:55:26.231Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/versions/343543f2e02dc5a8 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2025-11-25T08:55:26.746Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/versions/343543f2e02dc5a8 200
+[debug] [2025-11-25T08:55:26.746Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/versions/343543f2e02dc5a8 {"name":"projects/637503757230/sites/ceapp-serv/versions/343543f2e02dc5a8","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-11-25T08:55:24.108841Z","createUser":{"email":"mb4uday@gmail.com"},"finalizeTime":"2025-11-25T08:55:28.549483Z","finalizeUser":{"email":"mb4uday@gmail.com"}}
+[debug] [2025-11-25T08:55:26.746Z] [hosting] finalized version for ceapp-serv:[object Object]
+[info] +  hosting[ceapp-serv]: version finalized 
+[info] i  hosting[ceapp-serv]: releasing new version... 
+[debug] [2025-11-25T08:55:26.746Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T08:55:26.746Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T08:55:26.747Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/channels/live/releases versionName=projects%2F637503757230%2Fsites%2Fceapp-serv%2Fversions%2F343543f2e02dc5a8
+[debug] [2025-11-25T08:55:26.747Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/channels/live/releases {}
+[debug] [2025-11-25T08:55:27.275Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/channels/live/releases 200
+[debug] [2025-11-25T08:55:27.275Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/channels/live/releases {"name":"projects/637503757230/sites/ceapp-serv/channels/live/releases/1764060928456000","version":{"name":"projects/637503757230/sites/ceapp-serv/versions/343543f2e02dc5a8","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-11-25T08:55:24.108841Z","createUser":{"email":"mb4uday@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/ALV-UjUZ0I6gQBKTv2omIs-rc1B_ucr5VmxcCXLgGLhK6W_4V05woQ"},"finalizeTime":"2025-11-25T08:55:28.549483Z","finalizeUser":{"email":"mb4uday@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/ALV-UjUZ0I6gQBKTv2omIs-rc1B_ucr5VmxcCXLgGLhK6W_4V05woQ"}},"type":"DEPLOY","releaseTime":"2025-11-25T08:55:28.456Z","releaseUser":{"email":"mb4uday@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/ALV-UjUZ0I6gQBKTv2omIs-rc1B_ucr5VmxcCXLgGLhK6W_4V05woQ"}}
+[debug] [2025-11-25T08:55:27.275Z] [hosting] release: {"name":"projects/637503757230/sites/ceapp-serv/channels/live/releases/1764060928456000","version":{"name":"projects/637503757230/sites/ceapp-serv/versions/343543f2e02dc5a8","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-11-25T08:55:24.108841Z","createUser":{"email":"mb4uday@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/ALV-UjUZ0I6gQBKTv2omIs-rc1B_ucr5VmxcCXLgGLhK6W_4V05woQ"},"finalizeTime":"2025-11-25T08:55:28.549483Z","finalizeUser":{"email":"mb4uday@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/ALV-UjUZ0I6gQBKTv2omIs-rc1B_ucr5VmxcCXLgGLhK6W_4V05woQ"}},"type":"DEPLOY","releaseTime":"2025-11-25T08:55:28.456Z","releaseUser":{"email":"mb4uday@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/ALV-UjUZ0I6gQBKTv2omIs-rc1B_ucr5VmxcCXLgGLhK6W_4V05woQ"}}
+[info] +  hosting[ceapp-serv]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/ceapp-serv/overview
+[info] Hosting URL: https://ceapp-serv.web.app
+[debug] [2025-11-25T09:17:43.029Z] ----------------------------------------------------------------------
+[debug] [2025-11-25T09:17:43.032Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hello pc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only firestore:rules,storage:rules
+[debug] [2025-11-25T09:17:43.032Z] CLI Version:   14.26.0
+[debug] [2025-11-25T09:17:43.032Z] Platform:      win32
+[debug] [2025-11-25T09:17:43.032Z] Node Version:  v25.2.1
+[debug] [2025-11-25T09:17:43.033Z] Time:          Tue Nov 25 2025 14:47:43 GMT+0530 (India Standard Time)
+[debug] [2025-11-25T09:17:43.033Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-11-25T09:17:43.336Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T09:17:43.338Z] > authorizing via signed-in user (mb4uday@gmail.com)
+[debug] [2025-11-25T09:17:43.339Z] [iam] checking project ceapp-serv for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2025-11-25T09:17:43.345Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:17:43.346Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:17:43.349Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions [none]
+[debug] [2025-11-25T09:17:43.349Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions x-goog-quota-user=projects/ceapp-serv
+[debug] [2025-11-25T09:17:43.350Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2025-11-25T09:17:45.292Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions 200
+[debug] [2025-11-25T09:17:45.292Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[info] 
+[info] === Deploying to 'ceapp-serv'...
+[info] 
+[info] i  deploying storage, firestore 
+[info] i  storage: ensuring required API firebasestorage.googleapis.com is enabled... 
+[debug] [2025-11-25T09:17:45.295Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:17:45.296Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:17:45.296Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ceapp-serv/services/firebasestorage.googleapis.com [none]
+[debug] [2025-11-25T09:17:45.296Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ceapp-serv/services/firebasestorage.googleapis.com x-goog-quota-user=projects/ceapp-serv
+[debug] [2025-11-25T09:17:47.032Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ceapp-serv/services/firebasestorage.googleapis.com 200
+[debug] [2025-11-25T09:17:47.032Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ceapp-serv/services/firebasestorage.googleapis.com [omitted]
+[info] +  storage: required API firebasestorage.googleapis.com is enabled 
+[debug] [2025-11-25T09:17:47.041Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:17:47.041Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:17:47.042Z] >>> [apiv2][query] GET https://firebasestorage.googleapis.com/v1alpha/projects/ceapp-serv/defaultBucket [none]
+[debug] [2025-11-25T09:17:47.729Z] <<< [apiv2][status] GET https://firebasestorage.googleapis.com/v1alpha/projects/ceapp-serv/defaultBucket 200
+[debug] [2025-11-25T09:17:47.729Z] <<< [apiv2][body] GET https://firebasestorage.googleapis.com/v1alpha/projects/ceapp-serv/defaultBucket {"name":"projects/ceapp-serv/defaultBucket","location":"US-CENTRAL1","bucket":{"name":"projects/ceapp-serv/buckets/ceapp-serv.firebasestorage.app"},"storageClass":"REGIONAL"}
+[error] 
+[error] Error: Could not find rules for the following storage targets: rules
+[debug] [2025-11-25T09:18:03.899Z] ----------------------------------------------------------------------
+[debug] [2025-11-25T09:18:03.902Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hello pc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only storage
+[debug] [2025-11-25T09:18:03.902Z] CLI Version:   14.26.0
+[debug] [2025-11-25T09:18:03.902Z] Platform:      win32
+[debug] [2025-11-25T09:18:03.902Z] Node Version:  v25.2.1
+[debug] [2025-11-25T09:18:03.902Z] Time:          Tue Nov 25 2025 14:48:03 GMT+0530 (India Standard Time)
+[debug] [2025-11-25T09:18:03.902Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-11-25T09:18:04.165Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T09:18:04.168Z] > authorizing via signed-in user (mb4uday@gmail.com)
+[debug] [2025-11-25T09:18:04.168Z] [iam] checking project ceapp-serv for permissions ["firebase.projects.get","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2025-11-25T09:18:04.175Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:04.175Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:04.177Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions [none]
+[debug] [2025-11-25T09:18:04.179Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions x-goog-quota-user=projects/ceapp-serv
+[debug] [2025-11-25T09:18:04.180Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions {"permissions":["firebase.projects.get","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2025-11-25T09:18:06.044Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions 200
+[debug] [2025-11-25T09:18:06.044Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions {"permissions":["firebase.projects.get","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[info] 
+[info] === Deploying to 'ceapp-serv'...
+[info] 
+[info] i  deploying storage 
+[info] i  storage: ensuring required API firebasestorage.googleapis.com is enabled... 
+[debug] [2025-11-25T09:18:06.047Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:06.047Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:06.047Z] >>> [apiv2][query] GET https://firebasestorage.googleapis.com/v1alpha/projects/ceapp-serv/defaultBucket [none]
+[debug] [2025-11-25T09:18:07.043Z] <<< [apiv2][status] GET https://firebasestorage.googleapis.com/v1alpha/projects/ceapp-serv/defaultBucket 200
+[debug] [2025-11-25T09:18:07.044Z] <<< [apiv2][body] GET https://firebasestorage.googleapis.com/v1alpha/projects/ceapp-serv/defaultBucket {"name":"projects/ceapp-serv/defaultBucket","location":"US-CENTRAL1","bucket":{"name":"projects/ceapp-serv/buckets/ceapp-serv.firebasestorage.app"},"storageClass":"REGIONAL"}
+[info] i  firebase.storage: checking CEApp/storage.rules for compilation errors... 
+[debug] [2025-11-25T09:18:07.045Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:07.045Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:07.045Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv:test [none]
+[debug] [2025-11-25T09:18:07.046Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv:test [omitted]
+[debug] [2025-11-25T09:18:08.617Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv:test 200
+[debug] [2025-11-25T09:18:08.617Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv:test {}
+[info] +  firebase.storage: rules file CEApp/storage.rules compiled successfully 
+[debug] [2025-11-25T09:18:08.618Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:08.618Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:08.619Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases pageSize=10&pageToken=
+[debug] [2025-11-25T09:18:10.017Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases 200
+[debug] [2025-11-25T09:18:10.017Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases {"releases":[{"name":"projects/ceapp-serv/releases/cloud.firestore/cedatabase","rulesetName":"projects/ceapp-serv/rulesets/e7ce5ff6-396a-4324-8221-c76e106ed74e","createTime":"2025-11-24T07:22:10.262338Z","updateTime":"2025-11-24T07:22:10.262338Z"},{"name":"projects/ceapp-serv/releases/firebase.storage/ceapp-serv.firebasestorage.app","rulesetName":"projects/ceapp-serv/rulesets/ad7ea94f-87f6-40a7-a314-b9e11bade8b4","createTime":"2025-11-24T07:19:50.873959Z","updateTime":"2025-11-24T07:19:50.873959Z"}]}
+[debug] [2025-11-25T09:18:10.031Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:10.032Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:10.032Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/ceapp-serv/rulesets/ad7ea94f-87f6-40a7-a314-b9e11bade8b4 [none]
+[debug] [2025-11-25T09:18:11.454Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/ceapp-serv/rulesets/ad7ea94f-87f6-40a7-a314-b9e11bade8b4 200
+[debug] [2025-11-25T09:18:11.454Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/ceapp-serv/rulesets/ad7ea94f-87f6-40a7-a314-b9e11bade8b4 [omitted]
+[info] i  storage: uploading rules CEApp/storage.rules... 
+[debug] [2025-11-25T09:18:11.456Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:11.456Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:11.456Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv/rulesets [none]
+[debug] [2025-11-25T09:18:11.456Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv/rulesets [omitted]
+[debug] [2025-11-25T09:18:12.858Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv/rulesets 200
+[debug] [2025-11-25T09:18:12.858Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv/rulesets {"name":"projects/ceapp-serv/rulesets/4acf172c-abdc-46f9-9f18-64ba87782820","source":{"files":[{"content":"rules_version = '2';\r\nservice firebase.storage {\r\n  match /b/{bucket}/o {\r\n    match /{allPaths=**} {\r\n      allow read: if true;\r\n      allow write: if request.auth != null;\r\n    }\r\n  }\r\n}","name":"CEApp/storage.rules"}]},"createTime":"2025-11-25T09:18:14.654415Z","metadata":{"services":["firebase.storage"]}}
+[debug] [2025-11-25T09:18:12.858Z] [rules] created ruleset projects/ceapp-serv/rulesets/4acf172c-abdc-46f9-9f18-64ba87782820
+[debug] [2025-11-25T09:18:12.859Z] [rules] releasing firebase.storage/ceapp-serv.firebasestorage.app with ruleset projects/ceapp-serv/rulesets/4acf172c-abdc-46f9-9f18-64ba87782820
+[debug] [2025-11-25T09:18:12.859Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:12.859Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:12.859Z] >>> [apiv2][query] PATCH https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases/firebase.storage/ceapp-serv.firebasestorage.app [none]
+[debug] [2025-11-25T09:18:12.860Z] >>> [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases/firebase.storage/ceapp-serv.firebasestorage.app {"release":{"name":"projects/ceapp-serv/releases/firebase.storage/ceapp-serv.firebasestorage.app","rulesetName":"projects/ceapp-serv/rulesets/4acf172c-abdc-46f9-9f18-64ba87782820"}}
+[debug] [2025-11-25T09:18:14.251Z] <<< [apiv2][status] PATCH https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases/firebase.storage/ceapp-serv.firebasestorage.app 200
+[debug] [2025-11-25T09:18:14.251Z] <<< [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases/firebase.storage/ceapp-serv.firebasestorage.app {"name":"projects/ceapp-serv/releases/firebase.storage/ceapp-serv.firebasestorage.app","rulesetName":"projects/ceapp-serv/rulesets/4acf172c-abdc-46f9-9f18-64ba87782820","createTime":"2025-11-24T07:19:50.873959Z","updateTime":"2025-11-25T09:18:16.049043Z"}
+[debug] [2025-11-25T09:18:14.251Z] [rules] updated release projects/ceapp-serv/releases/firebase.storage/ceapp-serv.firebasestorage.app
+[info] +  storage: released rules CEApp/storage.rules to firebase.storage 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/ceapp-serv/overview
+[debug] [2025-11-25T09:18:30.542Z] ----------------------------------------------------------------------
+[debug] [2025-11-25T09:18:30.545Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hello pc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only firestore
+[debug] [2025-11-25T09:18:30.545Z] CLI Version:   14.26.0
+[debug] [2025-11-25T09:18:30.545Z] Platform:      win32
+[debug] [2025-11-25T09:18:30.545Z] Node Version:  v25.2.1
+[debug] [2025-11-25T09:18:30.546Z] Time:          Tue Nov 25 2025 14:48:30 GMT+0530 (India Standard Time)
+[debug] [2025-11-25T09:18:30.546Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-11-25T09:18:30.824Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T09:18:30.826Z] > authorizing via signed-in user (mb4uday@gmail.com)
+[debug] [2025-11-25T09:18:30.827Z] [iam] checking project ceapp-serv for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]
+[debug] [2025-11-25T09:18:30.832Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:30.833Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:30.834Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions [none]
+[debug] [2025-11-25T09:18:30.835Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions x-goog-quota-user=projects/ceapp-serv
+[debug] [2025-11-25T09:18:30.835Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]}
+[debug] [2025-11-25T09:18:32.580Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions 200
+[debug] [2025-11-25T09:18:32.580Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]}
+[info] 
+[info] === Deploying to 'ceapp-serv'...
+[info] 
+[info] i  deploying firestore 
+[info] i  firestore: ensuring required API firestore.googleapis.com is enabled... 
+[info] i  firestore: ensuring required API firestore.googleapis.com is enabled... 
+[debug] [2025-11-25T09:18:32.584Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:32.585Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:32.585Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/ceapp-serv/databases/(default) [none]
+[debug] [2025-11-25T09:18:33.014Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/ceapp-serv/databases/(default) 404
+[debug] [2025-11-25T09:18:33.014Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/ceapp-serv/databases/(default) {"error":{"code":404,"message":"Project 'ceapp-serv' or database '(default)' does not exist.","status":"NOT_FOUND"}}
+[info] i  firestore: Creating the new Firestore database (default)... 
+[debug] [2025-11-25T09:18:33.015Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:33.015Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:33.015Z] >>> [apiv2][query] POST https://firestore.googleapis.com/v1/projects/ceapp-serv/databases databaseId=%28default%29
+[debug] [2025-11-25T09:18:33.015Z] >>> [apiv2][body] POST https://firestore.googleapis.com/v1/projects/ceapp-serv/databases {"locationId":"nam5","type":"FIRESTORE_NATIVE","databaseEdition":"STANDARD","deleteProtectionState":"DELETE_PROTECTION_DISABLED","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED"}
+[debug] [2025-11-25T09:18:34.450Z] <<< [apiv2][status] POST https://firestore.googleapis.com/v1/projects/ceapp-serv/databases 200
+[debug] [2025-11-25T09:18:34.450Z] <<< [apiv2][body] POST https://firestore.googleapis.com/v1/projects/ceapp-serv/databases {"name":"projects/ceapp-serv/databases/(default)/operations/kNll0G2ALIHxS2ng7SbnzxAqNW1hbgQiBRBJ3Nq4EAbJlejsCAsKJxo","metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.CreateDatabaseMetadata"},"response":{"@type":"type.googleapis.com/google.firestore.admin.v1.Database","name":"projects/ceapp-serv/databases/(default)","uid":"cfe726ed-e069-4bf1-812c-806dd065d990","createTime":"2025-11-25T09:18:36.154611Z","updateTime":"2025-11-25T09:18:36.154611Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2025-11-25T09:18:36.154611Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","databaseEdition":"STANDARD","freeTier":false,"realtimeUpdatesMode":"REALTIME_UPDATES_MODE_ENABLED","etag":"INrM3p38jJEDMPOd3Z38jJED"}}
+[debug] [2025-11-25T09:18:34.451Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:34.451Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:34.451Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/ceapp-serv/databases/(default)/operations/kNll0G2ALIHxS2ng7SbnzxAqNW1hbgQiBRBJ3Nq4EAbJlejsCAsKJxo [none]
+[debug] [2025-11-25T09:18:35.313Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/ceapp-serv/databases/(default)/operations/kNll0G2ALIHxS2ng7SbnzxAqNW1hbgQiBRBJ3Nq4EAbJlejsCAsKJxo 200
+[debug] [2025-11-25T09:18:35.313Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/ceapp-serv/databases/(default)/operations/kNll0G2ALIHxS2ng7SbnzxAqNW1hbgQiBRBJ3Nq4EAbJlejsCAsKJxo {"name":"projects/ceapp-serv/databases/(default)/operations/kNll0G2ALIHxS2ng7SbnzxAqNW1hbgQiBRBJ3Nq4EAbJlejsCAsKJxo","metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.CreateDatabaseMetadata"},"done":true,"response":{"@type":"type.googleapis.com/google.firestore.admin.v1.Database","name":"projects/ceapp-serv/databases/(default)","uid":"cfe726ed-e069-4bf1-812c-806dd065d990","createTime":"2025-11-25T09:18:36.154611Z","updateTime":"2025-11-25T09:18:36.154611Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2025-11-25T09:18:36.154611Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","databaseEdition":"STANDARD","freeTier":false,"realtimeUpdatesMode":"REALTIME_UPDATES_MODE_ENABLED","etag":"IPWv+p38jJEDMPOd3Z38jJED"}}
+[info] i  cloud.firestore: checking CEApp/firestore.rules for compilation errors... 
+[debug] [2025-11-25T09:18:35.314Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:35.314Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:35.315Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv:test [none]
+[debug] [2025-11-25T09:18:35.315Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv:test [omitted]
+[debug] [2025-11-25T09:18:36.796Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv:test 200
+[debug] [2025-11-25T09:18:36.796Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv:test {}
+[info] +  cloud.firestore: rules file CEApp/firestore.rules compiled successfully 
+[debug] [2025-11-25T09:18:36.797Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:36.797Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:36.797Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases pageSize=10&pageToken=
+[debug] [2025-11-25T09:18:38.190Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases 200
+[debug] [2025-11-25T09:18:38.190Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases {"releases":[{"name":"projects/ceapp-serv/releases/cloud.firestore/cedatabase","rulesetName":"projects/ceapp-serv/rulesets/e7ce5ff6-396a-4324-8221-c76e106ed74e","createTime":"2025-11-24T07:22:10.262338Z","updateTime":"2025-11-24T07:22:10.262338Z"},{"name":"projects/ceapp-serv/releases/firebase.storage/ceapp-serv.firebasestorage.app","rulesetName":"projects/ceapp-serv/rulesets/4acf172c-abdc-46f9-9f18-64ba87782820","createTime":"2025-11-24T07:19:50.873959Z","updateTime":"2025-11-25T09:18:16.049043Z"}]}
+[debug] [2025-11-25T09:18:38.204Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:38.204Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:38.204Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/ceapp-serv/rulesets/e7ce5ff6-396a-4324-8221-c76e106ed74e [none]
+[debug] [2025-11-25T09:18:38.944Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/ceapp-serv/rulesets/e7ce5ff6-396a-4324-8221-c76e106ed74e 200
+[debug] [2025-11-25T09:18:38.944Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/ceapp-serv/rulesets/e7ce5ff6-396a-4324-8221-c76e106ed74e [omitted]
+[info] i  firestore: uploading rules CEApp/firestore.rules... 
+[debug] [2025-11-25T09:18:38.946Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:38.946Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:38.946Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv/rulesets [none]
+[debug] [2025-11-25T09:18:38.946Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv/rulesets [omitted]
+[debug] [2025-11-25T09:18:40.327Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv/rulesets 200
+[debug] [2025-11-25T09:18:40.327Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv/rulesets {"name":"projects/ceapp-serv/rulesets/3d53378c-8bb0-43ca-9062-b05c1035112b","source":{"files":[{"content":"rules_version = '2';\r\nservice cloud.firestore {\r\n  match /databases/{database}/documents {\r\n    match /submissions/{document} {\r\n      allow read, write: if request.auth != null;\r\n    }\r\n  }\r\n}","name":"CEApp/firestore.rules"}]},"createTime":"2025-11-25T09:18:42.133407Z","metadata":{"services":["cloud.firestore"]}}
+[debug] [2025-11-25T09:18:40.328Z] [rules] created ruleset projects/ceapp-serv/rulesets/3d53378c-8bb0-43ca-9062-b05c1035112b
+[info] i  firestore: deploying indexes... 
+[debug] [2025-11-25T09:18:40.329Z] [rules] releasing cloud.firestore/(default) with ruleset projects/ceapp-serv/rulesets/3d53378c-8bb0-43ca-9062-b05c1035112b
+[debug] [2025-11-25T09:18:40.329Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:40.329Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:40.329Z] >>> [apiv2][query] PATCH https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases/cloud.firestore/(default) [none]
+[debug] [2025-11-25T09:18:40.329Z] >>> [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases/cloud.firestore/(default) {"release":{"name":"projects/ceapp-serv/releases/cloud.firestore/(default)","rulesetName":"projects/ceapp-serv/rulesets/3d53378c-8bb0-43ca-9062-b05c1035112b"}}
+[debug] [2025-11-25T09:18:40.700Z] <<< [apiv2][status] PATCH https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases/cloud.firestore/(default) 404
+[debug] [2025-11-25T09:18:40.700Z] <<< [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases/cloud.firestore/(default) {"error":{"code":404,"message":"Requested entity was not found.","status":"NOT_FOUND"}}
+[debug] [2025-11-25T09:18:40.701Z] [rules] ruleset update failed, attempting to create instead
+[debug] [2025-11-25T09:18:40.701Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:40.701Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:18:40.701Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases [none]
+[debug] [2025-11-25T09:18:40.701Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases {"name":"projects/ceapp-serv/releases/cloud.firestore/(default)","rulesetName":"projects/ceapp-serv/rulesets/3d53378c-8bb0-43ca-9062-b05c1035112b"}
+[debug] [2025-11-25T09:18:42.122Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases 200
+[debug] [2025-11-25T09:18:42.122Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases {"name":"projects/ceapp-serv/releases/cloud.firestore","rulesetName":"projects/ceapp-serv/rulesets/3d53378c-8bb0-43ca-9062-b05c1035112b","createTime":"2025-11-25T09:18:43.933609Z","updateTime":"2025-11-25T09:18:43.933609Z"}
+[debug] [2025-11-25T09:18:42.122Z] [rules] created release projects/ceapp-serv/releases/cloud.firestore
+[info] +  firestore: released rules CEApp/firestore.rules to cloud.firestore 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/ceapp-serv/overview
+[debug] [2025-11-25T09:19:13.651Z] ----------------------------------------------------------------------
+[debug] [2025-11-25T09:19:13.653Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hello pc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only firestore
+[debug] [2025-11-25T09:19:13.654Z] CLI Version:   14.26.0
+[debug] [2025-11-25T09:19:13.654Z] Platform:      win32
+[debug] [2025-11-25T09:19:13.654Z] Node Version:  v25.2.1
+[debug] [2025-11-25T09:19:13.654Z] Time:          Tue Nov 25 2025 14:49:13 GMT+0530 (India Standard Time)
+[debug] [2025-11-25T09:19:13.654Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-11-25T09:19:13.929Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T09:19:13.930Z] > authorizing via signed-in user (mb4uday@gmail.com)
+[debug] [2025-11-25T09:19:13.931Z] [iam] checking project ceapp-serv for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]
+[debug] [2025-11-25T09:19:13.937Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:19:13.937Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:19:13.939Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions [none]
+[debug] [2025-11-25T09:19:13.939Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions x-goog-quota-user=projects/ceapp-serv
+[debug] [2025-11-25T09:19:13.939Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]}
+[debug] [2025-11-25T09:19:15.768Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions 200
+[debug] [2025-11-25T09:19:15.768Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]}
+[info] 
+[info] === Deploying to 'ceapp-serv'...
+[info] 
+[info] i  deploying firestore 
+[info] i  firestore: ensuring required API firestore.googleapis.com is enabled... 
+[info] i  firestore: ensuring required API firestore.googleapis.com is enabled... 
+[debug] [2025-11-25T09:19:15.772Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:19:15.772Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:19:15.772Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/ceapp-serv/databases/(default) [none]
+[debug] [2025-11-25T09:19:17.435Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/ceapp-serv/databases/(default) 200
+[debug] [2025-11-25T09:19:17.436Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/ceapp-serv/databases/(default) {"name":"projects/ceapp-serv/databases/(default)","uid":"cfe726ed-e069-4bf1-812c-806dd065d990","createTime":"2025-11-25T09:18:36.154611Z","updateTime":"2025-11-25T09:18:36.154611Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2025-11-25T09:18:36.154611Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","databaseEdition":"STANDARD","freeTier":false,"realtimeUpdatesMode":"REALTIME_UPDATES_MODE_ENABLED","etag":"IN/ZpbL8jJEDMPOd3Z38jJED"}
+[info] i  cloud.firestore: checking CEApp/firestore.rules for compilation errors... 
+[debug] [2025-11-25T09:19:17.437Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:19:17.437Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:19:17.437Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv:test [none]
+[debug] [2025-11-25T09:19:17.437Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv:test [omitted]
+[debug] [2025-11-25T09:19:18.963Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv:test 200
+[debug] [2025-11-25T09:19:18.963Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv:test {}
+[info] +  cloud.firestore: rules file CEApp/firestore.rules compiled successfully 
+[debug] [2025-11-25T09:19:18.964Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:19:18.965Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:19:18.965Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases pageSize=10&pageToken=
+[debug] [2025-11-25T09:19:20.302Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases 200
+[debug] [2025-11-25T09:19:20.302Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases {"releases":[{"name":"projects/ceapp-serv/releases/cloud.firestore","rulesetName":"projects/ceapp-serv/rulesets/3d53378c-8bb0-43ca-9062-b05c1035112b","createTime":"2025-11-25T09:18:43.933609Z","updateTime":"2025-11-25T09:18:43.933609Z"},{"name":"projects/ceapp-serv/releases/cloud.firestore/cedatabase","rulesetName":"projects/ceapp-serv/rulesets/e7ce5ff6-396a-4324-8221-c76e106ed74e","createTime":"2025-11-24T07:22:10.262338Z","updateTime":"2025-11-24T07:22:10.262338Z"},{"name":"projects/ceapp-serv/releases/firebase.storage/ceapp-serv.firebasestorage.app","rulesetName":"projects/ceapp-serv/rulesets/4acf172c-abdc-46f9-9f18-64ba87782820","createTime":"2025-11-24T07:19:50.873959Z","updateTime":"2025-11-25T09:18:16.049043Z"}]}
+[debug] [2025-11-25T09:19:20.317Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:19:20.317Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:19:20.317Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/ceapp-serv/rulesets/3d53378c-8bb0-43ca-9062-b05c1035112b [none]
+[debug] [2025-11-25T09:19:21.679Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/ceapp-serv/rulesets/3d53378c-8bb0-43ca-9062-b05c1035112b 200
+[debug] [2025-11-25T09:19:21.679Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/ceapp-serv/rulesets/3d53378c-8bb0-43ca-9062-b05c1035112b [omitted]
+[info] i  firestore: uploading rules CEApp/firestore.rules... 
+[debug] [2025-11-25T09:19:21.681Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:19:21.681Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:19:21.681Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv/rulesets [none]
+[debug] [2025-11-25T09:19:21.681Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv/rulesets [omitted]
+[debug] [2025-11-25T09:19:23.049Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv/rulesets 200
+[debug] [2025-11-25T09:19:23.049Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/ceapp-serv/rulesets {"name":"projects/ceapp-serv/rulesets/46fe5aef-97e1-4454-8910-40fedead3a10","source":{"files":[{"content":"rules_version = '2';\r\nservice cloud.firestore {\r\n  match /databases/{database}/documents {\r\n    match /submissions/{document} {\r\n      allow read, write: if request.auth != null;\r\n    }\r\n    match /contacts/{document} {\r\n      allow read, write: if request.auth != null;\r\n    }\r\n    match /company/{document} {\r\n      allow read, write: if request.auth != null;\r\n    }\r\n  }\r\n}","name":"CEApp/firestore.rules"}]},"createTime":"2025-11-25T09:19:24.860655Z","metadata":{"services":["cloud.firestore"]}}
+[debug] [2025-11-25T09:19:23.049Z] [rules] created ruleset projects/ceapp-serv/rulesets/46fe5aef-97e1-4454-8910-40fedead3a10
+[info] i  firestore: deploying indexes... 
+[debug] [2025-11-25T09:19:23.050Z] [rules] releasing cloud.firestore/(default) with ruleset projects/ceapp-serv/rulesets/46fe5aef-97e1-4454-8910-40fedead3a10
+[debug] [2025-11-25T09:19:23.051Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:19:23.051Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:19:23.051Z] >>> [apiv2][query] PATCH https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases/cloud.firestore/(default) [none]
+[debug] [2025-11-25T09:19:23.051Z] >>> [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases/cloud.firestore/(default) {"release":{"name":"projects/ceapp-serv/releases/cloud.firestore/(default)","rulesetName":"projects/ceapp-serv/rulesets/46fe5aef-97e1-4454-8910-40fedead3a10"}}
+[debug] [2025-11-25T09:19:23.491Z] <<< [apiv2][status] PATCH https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases/cloud.firestore/(default) 200
+[debug] [2025-11-25T09:19:23.491Z] <<< [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/ceapp-serv/releases/cloud.firestore/(default) {"name":"projects/ceapp-serv/releases/cloud.firestore","rulesetName":"projects/ceapp-serv/rulesets/46fe5aef-97e1-4454-8910-40fedead3a10","createTime":"2025-11-25T09:18:43.933609Z","updateTime":"2025-11-25T09:19:25.290359Z"}
+[debug] [2025-11-25T09:19:23.492Z] [rules] updated release projects/ceapp-serv/releases/cloud.firestore
+[info] +  firestore: released rules CEApp/firestore.rules to cloud.firestore 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/ceapp-serv/overview
+[debug] [2025-11-25T09:21:21.297Z] ----------------------------------------------------------------------
+[debug] [2025-11-25T09:21:21.299Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hello pc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2025-11-25T09:21:21.300Z] CLI Version:   14.26.0
+[debug] [2025-11-25T09:21:21.300Z] Platform:      win32
+[debug] [2025-11-25T09:21:21.300Z] Node Version:  v25.2.1
+[debug] [2025-11-25T09:21:21.300Z] Time:          Tue Nov 25 2025 14:51:21 GMT+0530 (India Standard Time)
+[debug] [2025-11-25T09:21:21.300Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-11-25T09:21:21.567Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T09:21:21.570Z] > authorizing via signed-in user (mb4uday@gmail.com)
+[debug] [2025-11-25T09:21:21.571Z] [iam] checking project ceapp-serv for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-11-25T09:21:21.576Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:21:21.577Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:21:21.580Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions [none]
+[debug] [2025-11-25T09:21:21.580Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions x-goog-quota-user=projects/ceapp-serv
+[debug] [2025-11-25T09:21:21.580Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-11-25T09:21:23.353Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions 200
+[debug] [2025-11-25T09:21:23.354Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-11-25T09:21:23.354Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:21:23.355Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:21:23.355Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ceapp-serv [none]
+[debug] [2025-11-25T09:21:24.051Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ceapp-serv 200
+[debug] [2025-11-25T09:21:24.051Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ceapp-serv {"projectId":"ceapp-serv","projectNumber":"637503757230","displayName":"CEApp","name":"projects/ceapp-serv","resources":{"hostingSite":"ceapp-serv"},"state":"ACTIVE","etag":"1_2e9851fe-331f-4658-8ba3-6228c752a134"}
+[info] 
+[info] === Deploying to 'ceapp-serv'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-11-25T09:21:24.057Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:21:24.058Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:21:24.058Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/versions [none]
+[debug] [2025-11-25T09:21:24.058Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-11-25T09:21:25.760Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/versions 200
+[debug] [2025-11-25T09:21:25.760Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/versions {"name":"projects/637503757230/sites/ceapp-serv/versions/e8160f647e494aa1","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[ceapp-serv]: beginning deploy... 
+[info] i  hosting[ceapp-serv]: found 5 files in CEApp/dist 
+[debug] [2025-11-25T09:21:25.776Z] [hosting] uploading with 200 concurrency
+[debug] [2025-11-25T09:21:25.864Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:21:25.865Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:21:25.866Z] [hosting] hash cache [Q0VBcHBcZGlzdA] stored for 5 files
+[debug] [2025-11-25T09:21:25.866Z] [hosting][hash queue][FINAL] {"max":85,"min":4,"avg":20.8,"active":0,"complete":5,"success":5,"errored":0,"retried":0,"total":5,"elapsed":88}
+[debug] [2025-11-25T09:21:25.866Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/637503757230/sites/ceapp-serv/versions/e8160f647e494aa1:populateFiles [none]
+[debug] [2025-11-25T09:21:25.866Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/637503757230/sites/ceapp-serv/versions/e8160f647e494aa1:populateFiles {"files":{"/metadata.json":"59607d4abc28dbe25c04810f4160b1e785f320a28d51d4caf80c70367ec8b978","/favicon.ico":"852bd579b4b43ed53cf18cce401ec9cdf72f0953afddcd5f234b3a5cd5e780df","/_expo/static/css/styles-b24d912070d2078785f6f7c34da03f59.css":"439d8b58c38dbe8b14184943c60b3909c6794aa29a430c1cd34e3315af29ce94","/index.html":"3dbe6d32536463ab40a9dc44bb0c1dcd5a51312b831b130b7f07e90122127b37","/_expo/static/js/web/index-a7af8917cf91c4162df5ccb4ecc50ca8.js":"ac44ed0b45cac4c7afd001f77fc9ea913386e36ddeda1c84fd8fb96e9804eb22"}}
+[debug] [2025-11-25T09:21:26.449Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/637503757230/sites/ceapp-serv/versions/e8160f647e494aa1:populateFiles 200
+[debug] [2025-11-25T09:21:26.449Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/637503757230/sites/ceapp-serv/versions/e8160f647e494aa1:populateFiles {"uploadRequiredHashes":["3dbe6d32536463ab40a9dc44bb0c1dcd5a51312b831b130b7f07e90122127b37","ac44ed0b45cac4c7afd001f77fc9ea913386e36ddeda1c84fd8fb96e9804eb22"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/e8160f647e494aa1/files"}
+[debug] [2025-11-25T09:21:26.450Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:21:26.450Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:21:26.450Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:21:26.451Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:21:26.451Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/e8160f647e494aa1/files/3dbe6d32536463ab40a9dc44bb0c1dcd5a51312b831b130b7f07e90122127b37 [none]
+[debug] [2025-11-25T09:21:26.451Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/e8160f647e494aa1/files/3dbe6d32536463ab40a9dc44bb0c1dcd5a51312b831b130b7f07e90122127b37 [stream]
+[debug] [2025-11-25T09:21:26.452Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/e8160f647e494aa1/files/ac44ed0b45cac4c7afd001f77fc9ea913386e36ddeda1c84fd8fb96e9804eb22 [none]
+[debug] [2025-11-25T09:21:26.453Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/e8160f647e494aa1/files/ac44ed0b45cac4c7afd001f77fc9ea913386e36ddeda1c84fd8fb96e9804eb22 [stream]
+[debug] [2025-11-25T09:21:26.454Z] [hosting][populate queue][FINAL] {"max":587,"min":587,"avg":587,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":590}
+[debug] [2025-11-25T09:21:26.454Z] [hosting] uploads queued: 2
+[info] i  hosting: uploading new files [0/2] (0%) 
+[debug] [2025-11-25T09:21:28.138Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/e8160f647e494aa1/files/3dbe6d32536463ab40a9dc44bb0c1dcd5a51312b831b130b7f07e90122127b37 200
+[debug] [2025-11-25T09:21:28.138Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/e8160f647e494aa1/files/3dbe6d32536463ab40a9dc44bb0c1dcd5a51312b831b130b7f07e90122127b37 [stream]
+[debug] [2025-11-25T09:21:28.570Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/e8160f647e494aa1/files/ac44ed0b45cac4c7afd001f77fc9ea913386e36ddeda1c84fd8fb96e9804eb22 200
+[debug] [2025-11-25T09:21:28.570Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/e8160f647e494aa1/files/ac44ed0b45cac4c7afd001f77fc9ea913386e36ddeda1c84fd8fb96e9804eb22 [stream]
+[debug] [2025-11-25T09:21:28.570Z] [hosting][upload queue][FINAL] {"max":2120,"min":1689,"avg":1904.5,"active":0,"complete":2,"success":2,"errored":0,"retried":0,"total":2,"elapsed":2121}
+[info] i  hosting: upload complete 
+[info] +  hosting[ceapp-serv]: file upload complete 
+[debug] [2025-11-25T09:21:28.570Z] [hosting] deploy completed after 2807ms
+[debug] [2025-11-25T09:21:28.571Z] [
+  {
+    "config": {
+      "public": "CEApp/dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "ceapp-serv"
+    },
+    "version": "projects/637503757230/sites/ceapp-serv/versions/e8160f647e494aa1"
+  }
+]
+[info] i  hosting[ceapp-serv]: finalizing version... 
+[debug] [2025-11-25T09:21:28.572Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:21:28.573Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:21:28.573Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/versions/e8160f647e494aa1 updateMask=status%2Cconfig
+[debug] [2025-11-25T09:21:28.573Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/versions/e8160f647e494aa1 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2025-11-25T09:21:29.393Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/versions/e8160f647e494aa1 200
+[debug] [2025-11-25T09:21:29.393Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/versions/e8160f647e494aa1 {"name":"projects/637503757230/sites/ceapp-serv/versions/e8160f647e494aa1","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-11-25T09:21:27.182037Z","createUser":{"email":"mb4uday@gmail.com"},"finalizeTime":"2025-11-25T09:21:31.146521Z","finalizeUser":{"email":"mb4uday@gmail.com"}}
+[debug] [2025-11-25T09:21:29.393Z] [hosting] finalized version for ceapp-serv:[object Object]
+[info] +  hosting[ceapp-serv]: version finalized 
+[info] i  hosting[ceapp-serv]: releasing new version... 
+[debug] [2025-11-25T09:21:29.393Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:21:29.393Z] Checked if tokens are valid: true, expires at: 1764063478562
+[debug] [2025-11-25T09:21:29.394Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/channels/live/releases versionName=projects%2F637503757230%2Fsites%2Fceapp-serv%2Fversions%2Fe8160f647e494aa1
+[debug] [2025-11-25T09:21:29.394Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/channels/live/releases {}
+[debug] [2025-11-25T09:21:29.997Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/channels/live/releases 200
+[debug] [2025-11-25T09:21:29.997Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/channels/live/releases {"name":"projects/637503757230/sites/ceapp-serv/channels/live/releases/1764062491161000","version":{"name":"projects/637503757230/sites/ceapp-serv/versions/e8160f647e494aa1","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-11-25T09:21:27.182037Z","createUser":{"email":"mb4uday@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/ALV-UjUZ0I6gQBKTv2omIs-rc1B_ucr5VmxcCXLgGLhK6W_4V05woQ"},"finalizeTime":"2025-11-25T09:21:31.146521Z","finalizeUser":{"email":"mb4uday@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/ALV-UjUZ0I6gQBKTv2omIs-rc1B_ucr5VmxcCXLgGLhK6W_4V05woQ"}},"type":"DEPLOY","releaseTime":"2025-11-25T09:21:31.161Z","releaseUser":{"email":"mb4uday@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/ALV-UjUZ0I6gQBKTv2omIs-rc1B_ucr5VmxcCXLgGLhK6W_4V05woQ"}}
+[debug] [2025-11-25T09:21:29.998Z] [hosting] release: {"name":"projects/637503757230/sites/ceapp-serv/channels/live/releases/1764062491161000","version":{"name":"projects/637503757230/sites/ceapp-serv/versions/e8160f647e494aa1","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-11-25T09:21:27.182037Z","createUser":{"email":"mb4uday@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/ALV-UjUZ0I6gQBKTv2omIs-rc1B_ucr5VmxcCXLgGLhK6W_4V05woQ"},"finalizeTime":"2025-11-25T09:21:31.146521Z","finalizeUser":{"email":"mb4uday@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/ALV-UjUZ0I6gQBKTv2omIs-rc1B_ucr5VmxcCXLgGLhK6W_4V05woQ"}},"type":"DEPLOY","releaseTime":"2025-11-25T09:21:31.161Z","releaseUser":{"email":"mb4uday@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/ALV-UjUZ0I6gQBKTv2omIs-rc1B_ucr5VmxcCXLgGLhK6W_4V05woQ"}}
+[info] +  hosting[ceapp-serv]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/ceapp-serv/overview
+[info] Hosting URL: https://ceapp-serv.web.app
+[debug] [2025-11-25T09:43:13.840Z] ----------------------------------------------------------------------
+[debug] [2025-11-25T09:43:13.843Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hello pc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2025-11-25T09:43:13.843Z] CLI Version:   14.26.0
+[debug] [2025-11-25T09:43:13.843Z] Platform:      win32
+[debug] [2025-11-25T09:43:13.843Z] Node Version:  v25.2.1
+[debug] [2025-11-25T09:43:13.843Z] Time:          Tue Nov 25 2025 15:13:13 GMT+0530 (India Standard Time)
+[debug] [2025-11-25T09:43:13.844Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-11-25T09:43:14.124Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-25T09:43:14.125Z] > authorizing via signed-in user (mb4uday@gmail.com)
+[debug] [2025-11-25T09:43:14.127Z] [iam] checking project ceapp-serv for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-11-25T09:43:14.142Z] Checked if tokens are valid: false, expires at: 1764063478562
+[debug] [2025-11-25T09:43:14.143Z] Checked if tokens are valid: false, expires at: 1764063478562
+[debug] [2025-11-25T09:43:14.144Z] > refreshing access token with scopes: []
+[debug] [2025-11-25T09:43:14.153Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-25T09:43:14.153Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T09:43:14.450Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-25T09:43:14.450Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-25T09:43:14.461Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions [none]
+[debug] [2025-11-25T09:43:14.461Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions x-goog-quota-user=projects/ceapp-serv
+[debug] [2025-11-25T09:43:14.461Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-11-25T09:43:15.880Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions 200
+[debug] [2025-11-25T09:43:15.880Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ceapp-serv:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-11-25T09:43:15.881Z] Checked if tokens are valid: true, expires at: 1764067393450
+[debug] [2025-11-25T09:43:15.881Z] Checked if tokens are valid: true, expires at: 1764067393450
+[debug] [2025-11-25T09:43:15.881Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ceapp-serv [none]
+[debug] [2025-11-25T09:43:16.370Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ceapp-serv 200
+[debug] [2025-11-25T09:43:16.370Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ceapp-serv {"projectId":"ceapp-serv","projectNumber":"637503757230","displayName":"CEApp","name":"projects/ceapp-serv","resources":{"hostingSite":"ceapp-serv"},"state":"ACTIVE","etag":"1_69812247-c798-419d-b172-f03b4532288c"}
+[info] 
+[info] === Deploying to 'ceapp-serv'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-11-25T09:43:16.376Z] Checked if tokens are valid: true, expires at: 1764067393450
+[debug] [2025-11-25T09:43:16.376Z] Checked if tokens are valid: true, expires at: 1764067393450
+[debug] [2025-11-25T09:43:16.376Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/versions [none]
+[debug] [2025-11-25T09:43:16.376Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-11-25T09:43:18.093Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/versions 200
+[debug] [2025-11-25T09:43:18.093Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/versions {"name":"projects/637503757230/sites/ceapp-serv/versions/a0f61a6137381dc1","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[ceapp-serv]: beginning deploy... 
+[info] i  hosting[ceapp-serv]: found 5 files in CEApp/dist 
+[debug] [2025-11-25T09:43:18.110Z] [hosting] uploading with 200 concurrency
+[debug] [2025-11-25T09:43:18.200Z] Checked if tokens are valid: true, expires at: 1764067393450
+[debug] [2025-11-25T09:43:18.201Z] Checked if tokens are valid: true, expires at: 1764067393450
+[debug] [2025-11-25T09:43:18.202Z] [hosting] hash cache [Q0VBcHBcZGlzdA] stored for 5 files
+[debug] [2025-11-25T09:43:18.202Z] [hosting][hash queue][FINAL] {"max":87,"min":5,"avg":22.8,"active":0,"complete":5,"success":5,"errored":0,"retried":0,"total":5,"elapsed":91}
+[debug] [2025-11-25T09:43:18.202Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/637503757230/sites/ceapp-serv/versions/a0f61a6137381dc1:populateFiles [none]
+[debug] [2025-11-25T09:43:18.203Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/637503757230/sites/ceapp-serv/versions/a0f61a6137381dc1:populateFiles {"files":{"/metadata.json":"59607d4abc28dbe25c04810f4160b1e785f320a28d51d4caf80c70367ec8b978","/index.html":"3dbe6d32536463ab40a9dc44bb0c1dcd5a51312b831b130b7f07e90122127b37","/_expo/static/css/styles-b24d912070d2078785f6f7c34da03f59.css":"439d8b58c38dbe8b14184943c60b3909c6794aa29a430c1cd34e3315af29ce94","/favicon.ico":"852bd579b4b43ed53cf18cce401ec9cdf72f0953afddcd5f234b3a5cd5e780df","/_expo/static/js/web/index-a7af8917cf91c4162df5ccb4ecc50ca8.js":"ac44ed0b45cac4c7afd001f77fc9ea913386e36ddeda1c84fd8fb96e9804eb22"}}
+[debug] [2025-11-25T09:43:18.665Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/637503757230/sites/ceapp-serv/versions/a0f61a6137381dc1:populateFiles 200
+[debug] [2025-11-25T09:43:18.665Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/637503757230/sites/ceapp-serv/versions/a0f61a6137381dc1:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/ceapp-serv/versions/a0f61a6137381dc1/files"}
+[debug] [2025-11-25T09:43:18.666Z] [hosting][populate queue][FINAL] {"max":466,"min":466,"avg":466,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":466}
+[debug] [2025-11-25T09:43:18.666Z] [hosting] uploads queued: 0
+[debug] [2025-11-25T09:43:18.666Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1764063798666}
+[info] i  hosting: upload complete 
+[info] +  hosting[ceapp-serv]: file upload complete 
+[debug] [2025-11-25T09:43:18.667Z] [hosting] deploy completed after 571ms
+[debug] [2025-11-25T09:43:18.667Z] [
+  {
+    "config": {
+      "public": "CEApp/dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "ceapp-serv"
+    },
+    "version": "projects/637503757230/sites/ceapp-serv/versions/a0f61a6137381dc1"
+  }
+]
+[info] i  hosting[ceapp-serv]: finalizing version... 
+[debug] [2025-11-25T09:43:18.668Z] Checked if tokens are valid: true, expires at: 1764067393450
+[debug] [2025-11-25T09:43:18.669Z] Checked if tokens are valid: true, expires at: 1764067393450
+[debug] [2025-11-25T09:43:18.669Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/versions/a0f61a6137381dc1 updateMask=status%2Cconfig
+[debug] [2025-11-25T09:43:18.669Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/versions/a0f61a6137381dc1 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2025-11-25T09:43:19.203Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/versions/a0f61a6137381dc1 200
+[debug] [2025-11-25T09:43:19.203Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/versions/a0f61a6137381dc1 {"name":"projects/637503757230/sites/ceapp-serv/versions/a0f61a6137381dc1","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-11-25T09:43:19.327549Z","createUser":{"email":"mb4uday@gmail.com"},"finalizeTime":"2025-11-25T09:43:21.018290Z","finalizeUser":{"email":"mb4uday@gmail.com"}}
+[debug] [2025-11-25T09:43:19.203Z] [hosting] finalized version for ceapp-serv:[object Object]
+[info] +  hosting[ceapp-serv]: version finalized 
+[info] i  hosting[ceapp-serv]: releasing new version... 
+[debug] [2025-11-25T09:43:19.204Z] Checked if tokens are valid: true, expires at: 1764067393450
+[debug] [2025-11-25T09:43:19.204Z] Checked if tokens are valid: true, expires at: 1764067393450
+[debug] [2025-11-25T09:43:19.204Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/channels/live/releases versionName=projects%2F637503757230%2Fsites%2Fceapp-serv%2Fversions%2Fa0f61a6137381dc1
+[debug] [2025-11-25T09:43:19.204Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/channels/live/releases {}
+[debug] [2025-11-25T09:43:19.749Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/channels/live/releases 200
+[debug] [2025-11-25T09:43:19.749Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ceapp-serv/channels/live/releases {"name":"projects/637503757230/sites/ceapp-serv/channels/live/releases/1764063800942000","version":{"name":"projects/637503757230/sites/ceapp-serv/versions/a0f61a6137381dc1","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-11-25T09:43:19.327549Z","createUser":{"email":"mb4uday@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/ALV-UjUZ0I6gQBKTv2omIs-rc1B_ucr5VmxcCXLgGLhK6W_4V05woQ"},"finalizeTime":"2025-11-25T09:43:21.018290Z","finalizeUser":{"email":"mb4uday@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/ALV-UjUZ0I6gQBKTv2omIs-rc1B_ucr5VmxcCXLgGLhK6W_4V05woQ"}},"type":"DEPLOY","releaseTime":"2025-11-25T09:43:20.942Z","releaseUser":{"email":"mb4uday@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/ALV-UjUZ0I6gQBKTv2omIs-rc1B_ucr5VmxcCXLgGLhK6W_4V05woQ"}}
+[debug] [2025-11-25T09:43:19.749Z] [hosting] release: {"name":"projects/637503757230/sites/ceapp-serv/channels/live/releases/1764063800942000","version":{"name":"projects/637503757230/sites/ceapp-serv/versions/a0f61a6137381dc1","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-11-25T09:43:19.327549Z","createUser":{"email":"mb4uday@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/ALV-UjUZ0I6gQBKTv2omIs-rc1B_ucr5VmxcCXLgGLhK6W_4V05woQ"},"finalizeTime":"2025-11-25T09:43:21.018290Z","finalizeUser":{"email":"mb4uday@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/ALV-UjUZ0I6gQBKTv2omIs-rc1B_ucr5VmxcCXLgGLhK6W_4V05woQ"}},"type":"DEPLOY","releaseTime":"2025-11-25T09:43:20.942Z","releaseUser":{"email":"mb4uday@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/ALV-UjUZ0I6gQBKTv2omIs-rc1B_ucr5VmxcCXLgGLhK6W_4V05woQ"}}
+[info] +  hosting[ceapp-serv]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/ceapp-serv/overview
+[info] Hosting URL: https://ceapp-serv.web.app

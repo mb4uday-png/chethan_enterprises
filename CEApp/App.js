@@ -1,5 +1,6 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
+import { Platform } from 'react-native';
 import './styles.css';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -20,7 +21,7 @@ const Stack = createStackNavigator();
 
 function TabNavigator() {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator screenOptions={{ animationEnabled: Platform.OS !== 'web' }}>
       <Tab.Screen name="Services" component={Services} />
       <Tab.Screen name="My Estimates" component={MyEstimates} />
       <Tab.Screen name="Retrieve Estimates" component={RetrieveEstimates} />
@@ -32,7 +33,7 @@ function TabNavigator() {
 
 function AuthNavigator() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{ animationEnabled: Platform.OS !== 'web' }}>
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="SignUp" component={SignUp} />
       <Stack.Screen name="RetrieveEstimates" component={RetrieveEstimates} />
@@ -66,7 +67,7 @@ function AppContent() {
   } else {
     return (
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="AboutUs">
+        <Stack.Navigator initialRouteName="AboutUs" screenOptions={{ animationEnabled: Platform.OS !== 'web' }}>
           <Stack.Screen name="AboutUs" component={AboutUs} />
           <Stack.Screen name="Services" component={AuthNavigator} />
         </Stack.Navigator>

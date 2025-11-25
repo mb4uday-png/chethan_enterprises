@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "637503757230",
+    "project_id": "ceapp-serv",
+    "storage_bucket": "ceapp-serv.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:637503757230:android:aaa4fdef5d95f9caf8863f",
+        "android_client_info": {
+          "package_name": "com.ceapp.chethanenterprises"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQuepUNCFcIHhuO7C0F3vkDZ2hVKBM-gA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,776 @@
+extend type Mutation {
+  """
+  ✨ Insert a single `Bid` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  bid_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Bid_Data!
+  ): Bid_KeyOutput! @fdc_generated(from: "Bid", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `ContractorProfile` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  contractorProfile_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: ContractorProfile_Data!
+  ): ContractorProfile_KeyOutput! @fdc_generated(from: "ContractorProfile", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `ContractorService` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  contractorService_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: ContractorService_Data!
+  ): ContractorService_KeyOutput! @fdc_generated(from: "ContractorService", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `Project` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  project_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Project_Data!
+  ): Project_KeyOutput! @fdc_generated(from: "Project", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `Review` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  review_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Review_Data!
+  ): Review_KeyOutput! @fdc_generated(from: "Review", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `Service` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  service_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: Service_Data!
+  ): Service_KeyOutput! @fdc_generated(from: "Service", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `User` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  user_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: User_Data!
+  ): User_KeyOutput! @fdc_generated(from: "User", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert `Bid` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  bid_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Bid_Data!]!
+  ): [Bid_KeyOutput!]! @fdc_generated(from: "Bid", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `ContractorProfile` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  contractorProfile_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [ContractorProfile_Data!]!
+  ): [ContractorProfile_KeyOutput!]! @fdc_generated(from: "ContractorProfile", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `ContractorService` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  contractorService_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [ContractorService_Data!]!
+  ): [ContractorService_KeyOutput!]! @fdc_generated(from: "ContractorService", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `Project` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  project_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Project_Data!]!
+  ): [Project_KeyOutput!]! @fdc_generated(from: "Project", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `Review` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  review_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Review_Data!]!
+  ): [Review_KeyOutput!]! @fdc_generated(from: "Review", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `Service` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  service_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [Service_Data!]!
+  ): [Service_KeyOutput!]! @fdc_generated(from: "Service", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `User` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  user_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [User_Data!]!
+  ): [User_KeyOutput!]! @fdc_generated(from: "User", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert or update a single `Bid` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Bid`.
+  """
+  bid_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Bid_Data!
+  ): Bid_KeyOutput! @fdc_generated(from: "Bid", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `ContractorProfile` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `ContractorProfile`.
+  """
+  contractorProfile_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: ContractorProfile_Data!
+  ): ContractorProfile_KeyOutput! @fdc_generated(from: "ContractorProfile", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `ContractorService` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `ContractorService`.
+  """
+  contractorService_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: ContractorService_Data!
+  ): ContractorService_KeyOutput! @fdc_generated(from: "ContractorService", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `Project` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Project`.
+  """
+  project_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Project_Data!
+  ): Project_KeyOutput! @fdc_generated(from: "Project", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `Review` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Review`.
+  """
+  review_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Review_Data!
+  ): Review_KeyOutput! @fdc_generated(from: "Review", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `Service` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Service`.
+  """
+  service_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: Service_Data!
+  ): Service_KeyOutput! @fdc_generated(from: "Service", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `User` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `User`.
+  """
+  user_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: User_Data!
+  ): User_KeyOutput! @fdc_generated(from: "User", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update `Bid` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Bid`.
+  """
+  bid_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Bid_Data!]!
+  ): [Bid_KeyOutput!]! @fdc_generated(from: "Bid", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `ContractorProfile` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `ContractorProfile`.
+  """
+  contractorProfile_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [ContractorProfile_Data!]!
+  ): [ContractorProfile_KeyOutput!]! @fdc_generated(from: "ContractorProfile", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `ContractorService` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `ContractorService`.
+  """
+  contractorService_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [ContractorService_Data!]!
+  ): [ContractorService_KeyOutput!]! @fdc_generated(from: "ContractorService", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `Project` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Project`.
+  """
+  project_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Project_Data!]!
+  ): [Project_KeyOutput!]! @fdc_generated(from: "Project", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `Review` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Review`.
+  """
+  review_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Review_Data!]!
+  ): [Review_KeyOutput!]! @fdc_generated(from: "Review", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `Service` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `Service`.
+  """
+  service_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [Service_Data!]!
+  ): [Service_KeyOutput!]! @fdc_generated(from: "Service", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `User` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `User`.
+  """
+  user_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [User_Data!]!
+  ): [User_KeyOutput!]! @fdc_generated(from: "User", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Update a single `Bid` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Bid` or `null` if not found.
+  """
+  bid_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Bid_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Bid_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Bid_Data!
+  ): Bid_KeyOutput @fdc_generated(from: "Bid", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `ContractorProfile` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `ContractorProfile` or `null` if not found.
+  """
+  contractorProfile_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: ContractorProfile_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: ContractorProfile_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: ContractorProfile_Data!
+  ): ContractorProfile_KeyOutput @fdc_generated(from: "ContractorProfile", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `ContractorService` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `ContractorService` or `null` if not found.
+  """
+  contractorService_update(
+    """
+    The key used to identify the object.
+    """
+    key: ContractorService_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: ContractorService_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: ContractorService_Data!
+  ): ContractorService_KeyOutput @fdc_generated(from: "ContractorService", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `Project` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Project` or `null` if not found.
+  """
+  project_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Project_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Project_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Project_Data!
+  ): Project_KeyOutput @fdc_generated(from: "Project", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `Review` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Review` or `null` if not found.
+  """
+  review_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Review_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Review_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Review_Data!
+  ): Review_KeyOutput @fdc_generated(from: "Review", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `Service` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `Service` or `null` if not found.
+  """
+  service_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Service_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Service_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: Service_Data!
+  ): Service_KeyOutput @fdc_generated(from: "Service", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `User` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `User` or `null` if not found.
+  """
+  user_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: User_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: User_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: User_Data!
+  ): User_KeyOutput @fdc_generated(from: "User", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update `Bid` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  bid_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Bid_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Bid_Data!
+  ): Int! @fdc_generated(from: "Bid", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `ContractorProfile` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  contractorProfile_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: ContractorProfile_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: ContractorProfile_Data!
+  ): Int! @fdc_generated(from: "ContractorProfile", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `ContractorService` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  contractorService_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: ContractorService_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: ContractorService_Data!
+  ): Int! @fdc_generated(from: "ContractorService", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `Project` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  project_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Project_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Project_Data!
+  ): Int! @fdc_generated(from: "Project", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `Review` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  review_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Review_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Review_Data!
+  ): Int! @fdc_generated(from: "Review", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `Service` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  service_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: Service_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: Service_Data!
+  ): Int! @fdc_generated(from: "Service", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `User` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  user_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: User_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: User_Data!
+  ): Int! @fdc_generated(from: "User", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Delete a single `Bid` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  bid_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Bid_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Bid_FirstRow
+  ): Bid_KeyOutput @fdc_generated(from: "Bid", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `ContractorProfile` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  contractorProfile_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: ContractorProfile_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: ContractorProfile_FirstRow
+  ): ContractorProfile_KeyOutput @fdc_generated(from: "ContractorProfile", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `ContractorService` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  contractorService_delete(
+    """
+    The key used to identify the object.
+    """
+    key: ContractorService_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: ContractorService_FirstRow
+  ): ContractorService_KeyOutput @fdc_generated(from: "ContractorService", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `Project` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  project_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Project_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Project_FirstRow
+  ): Project_KeyOutput @fdc_generated(from: "Project", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `Review` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  review_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Review_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Review_FirstRow
+  ): Review_KeyOutput @fdc_generated(from: "Review", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `Service` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  service_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: Service_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: Service_FirstRow
+  ): Service_KeyOutput @fdc_generated(from: "Service", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `User` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  user_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: User_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: User_FirstRow
+  ): User_KeyOutput @fdc_generated(from: "User", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete `Bid` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  bid_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Bid_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Bid", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `ContractorProfile` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  contractorProfile_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: ContractorProfile_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "ContractorProfile", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `ContractorService` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  contractorService_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: ContractorService_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "ContractorService", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `Project` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  project_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Project_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Project", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `Review` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  review_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Review_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Review", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `Service` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  service_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: Service_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "Service", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `User` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  user_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: User_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "User", purpose: DELETE_MULTIPLE)
+}

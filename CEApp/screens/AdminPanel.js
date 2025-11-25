@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { View, FlatList, Alert, Linking, ScrollView } from 'react-native';
+import { View, FlatList, Alert, Linking, ScrollView, Text } from 'react-native';
 import { Button, Card, Title, Paragraph, TextInput } from 'react-native-paper';
 import { useAuth } from '../contexts/AuthContext';
 import { db, storage } from '../firebase';
-import { collection, query, where, getDocs, updateDoc, doc, addDoc, setDoc } from 'firebase/firestore';
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import { collection, query, where, getDocs, updateDoc, doc, addDoc, setDoc, deleteDoc } from 'firebase/firestore';
+import { ref, uploadBytes, getDownloadURL, deleteObject } from 'firebase/storage';
 import * as DocumentPicker from 'expo-document-picker';
 import CryptoJS from 'crypto-js';
 
@@ -26,21 +26,43 @@ export default function AdminPanel() {
   }, []);
 
   const fetchSubmissions = async () => {
-    const q = query(collection(db, 'submissions'));
-    const querySnapshot = await getDocs(q);
-    const subs = [];
-    querySnapshot.forEach((docSnap) => {
-      const data = docSnap.data();
-      subs.push({
-        id: docSnap.id,
-        ...data,
-        decryptedName: CryptoJS.AES.decrypt(data.name, key).toString(CryptoJS.enc.Utf8),
-        decryptedEmail: CryptoJS.AES.decrypt(data.email, key).toString(CryptoJS.enc.Utf8),
-        decryptedPhone: CryptoJS.AES.decrypt(data.phone, key).toString(CryptoJS.enc.Utf8),
-        decryptedDescription: CryptoJS.AES.decrypt(data.description, key).toString(CryptoJS.enc.Utf8),
+    try {
+      const q = query(collection(db, 'submissions'));
+      const querySnapshot = await getDocs(q);
+      const subs = [];
+      querySnapshot.forEach((docSnap) => {
+        const data = docSnap.data();
+        try {
+          const decryptedName = CryptoJS.AES.decrypt(data.name, key).toString(CryptoJS.enc.Utf8);
+          const decryptedEmail = CryptoJS.AES.decrypt(data.email, key).toString(CryptoJS.enc.Utf8);
+          const decryptedPhone = CryptoJS.AES.decrypt(data.phone, key).toString(CryptoJS.enc.Utf8);
+          const decryptedDescription = CryptoJS.AES.decrypt(data.description, key).toString(CryptoJS.enc.Utf8);
+          subs.push({
+            id: docSnap.id,
+            ...data,
+            decryptedName,
+            decryptedEmail,
+            decryptedPhone,
+            decryptedDescription,
+          });
+        } catch (decryptError) {
+          console.error('Decryption failed for submission:', docSnap.id, decryptError);
+          // Optionally, push with encrypted data or skip
+          subs.push({
+            id: docSnap.id,
+            ...data,
+            decryptedName: 'Decryption failed',
+            decryptedEmail: 'Decryption failed',
+            decryptedPhone: 'Decryption failed',
+            decryptedDescription: 'Decryption failed',
+          });
+        }
       });
-    });
-    setSubmissions(subs);
+      setSubmissions(subs);
+    } catch (error) {
+      console.error('Error fetching submissions:', error);
+      Alert.alert('Error', 'Failed to fetch submissions');
+    }
   };
 
   const fetchContacts = async () => {
@@ -77,6 +99,7 @@ export default function AdminPanel() {
       const estimateUrl = await getDownloadURL(fileRef);
       await updateDoc(doc(db, 'submissions', submissionId), {
         estimateUrl,
+        estimateFileName: result.name,
         status: 'completed',
       });
       Alert.alert('Success', 'Estimate uploaded');
@@ -94,6 +117,40 @@ export default function AdminPanel() {
       const url = await getDownloadURL(fileRef);
       setLogoUrl(url);
     }
+  };
+
+  const deleteSubmission = async (submission) => {
+    Alert.alert(
+      'Delete Submission',
+      'Are you sure you want to delete this submission?',
+      [
+        { text: 'Cancel', style: 'cancel' },
+        {
+          text: 'Delete',
+          style: 'destructive',
+          onPress: async () => {
+            try {
+              // Delete design file if exists
+              if (submission.fileUrl && submission.fileName) {
+                const fileRef = ref(storage, `designs/${submission.userId}/${submission.fileName}`);
+                await deleteObject(fileRef);
+              }
+              // Delete estimate file if exists
+              if (submission.estimateUrl && submission.estimateFileName) {
+                const fileRef = ref(storage, `estimates/${submission.id}/${submission.estimateFileName}`);
+                await deleteObject(fileRef);
+              }
+              // Delete document
+              await deleteDoc(doc(db, 'submissions', submission.id));
+              Alert.alert('Success', 'Submission deleted');
+              fetchSubmissions();
+            } catch (error) {
+              Alert.alert('Error', error.message);
+            }
+          },
+        },
+      ]
+    );
   };
 
   const updateCompany = async () => {
@@ -114,13 +171,15 @@ export default function AdminPanel() {
     <Card style={{ margin: 10 }}>
       <Card.Content>
         <Title>{item.decryptedName}</Title>
-        <Paragraph>Email: {item.decryptedEmail}</Paragraph>
-        <Paragraph>Phone: {item.decryptedPhone}</Paragraph>
-        <Paragraph>Description: {item.decryptedDescription}</Paragraph>
-        <Paragraph>Status: {item.status}</Paragraph>
-        {item.fileUrl && <Button onPress={() => Linking.openURL(item.fileUrl)}>View Design</Button>}
+        <Text>Email: {item.decryptedEmail}</Text>
+        <Text>Phone: {item.decryptedPhone}</Text>
+        <Text>Description: {item.decryptedDescription}</Text>
+        <Text>Status: {item.status}</Text>
+        {item.fileName && <Text>Uploaded File: {item.fileName}</Text>}
+        {item.fileUrl && <Button onPress={() => Linking.openURL(item.fileUrl)}>Download Design</Button>}
         {item.status === 'pending' && <Button onPress={() => uploadEstimate(item.id)}>Upload Estimate</Button>}
-        {item.status === 'completed' && item.estimateUrl && <Button onPress={() => Linking.openURL(item.estimateUrl)}>View Estimate</Button>}
+        {item.status === 'completed' && item.estimateUrl && <Button onPress={() => Linking.openURL(item.estimateUrl)}>Download Estimate</Button>}
+        <Button onPress={() => deleteSubmission(item)} style={{ marginTop: 10 }} mode="outlined" color="red">Delete Submission</Button>
       </Card.Content>
     </Card>
   );
@@ -129,8 +188,8 @@ export default function AdminPanel() {
     <Card style={{ margin: 10 }}>
       <Card.Content>
         <Title>{item.name}</Title>
-        <Paragraph>Email: {item.email}</Paragraph>
-        <Paragraph>Message: {item.message}</Paragraph>
+        <Text>Email: {item.email}</Text>
+        <Text>Message: {item.message}</Text>
       </Card.Content>
     </Card>
   );
