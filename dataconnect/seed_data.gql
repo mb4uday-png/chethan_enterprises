@@ -1,0 +1,65 @@
+mutation CreateDemoData @transaction @auth(level: PUBLIC, insecureReason: "This mutation is safe to expose to the public") {
+  user_insertMany(data: [
+    {
+      id: "550e8400-e29b-41d4-a716-446655440000",
+      accountType: "client",
+      companyName: "Demo Company 1",
+      createdAt: "2024-04-26T12:00:00Z",
+      email: "demo1@example.com",
+      firstName: "Demo",
+      lastName: "User1",
+      passwordHash: "passwordhash1",
+      phoneNumber: "123-456-7890",
+      profilePictureUrl: "http://example.com/image1.jpg"
+    },
+    {
+      id: "550e8400-e29b-41d4-a716-446655440001",
+      accountType: "contractor",
+      companyName: "Demo Company 2",
+      createdAt: "2024-04-26T13:00:00Z",
+      email: "demo2@example.com",
+      firstName: "Demo",
+      lastName: "User2",
+      passwordHash: "passwordhash2",
+      phoneNumber: "987-654-3210",
+      profilePictureUrl: "http://example.com/image2.jpg"
+    }
+  ])
+  contractorProfile_insertMany(data: [
+    {
+      id: "660e8400-e29b-41d4-a716-446655440002",
+      userId: "550e8400-e29b-41d4-a716-446655440001",
+      bio: "Experienced contractor",
+      experienceYears: 5,
+      hourlyRate: 60.0,
+      licenseNumber: "LN12345",
+      websiteUrl: "http://contractor.com"
+    }
+  ])
+  project_insertMany(data: [
+    {
+      id: "770e8400-e29b-41d4-a716-446655440003",
+      clientId: "550e8400-e29b-41d4-a716-446655440000",
+      hiredContractorId: "660e8400-e29b-41d4-a716-446655440002",
+      budget: 10000.0,
+      createdAt: "2024-04-27T10:00:00Z",
+      description: "Demo project description",
+      endDate: "2024-05-27",
+      location: "Demo Location",
+      startDate: "2024-04-27",
+      status: "active",
+      title: "Demo Project"
+    }
+  ])
+  review_insertMany(data: [
+    {
+      id: "880e8400-e29b-41d4-a716-446655440004",
+      clientId: "550e8400-e29b-41d4-a716-446655440000",
+      contractorProfileId: "660e8400-e29b-41d4-a716-446655440002",
+      projectId: "770e8400-e29b-41d4-a716-446655440003",
+      comment: "Great work!",
+      createdAt: "2024-04-28T11:00:00Z",
+      rating: 5
+    }
+  ])
+}

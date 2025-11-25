@@ -1,0 +1,32 @@
+mutation AddNewService($description: String!, $iconUrl: String, $name: String!) @auth(level: USER) {
+  service_insert(data: {description: $description, iconUrl: $iconUrl, name: $name})
+}
+
+query ListContractorProfiles @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public") {
+  contractorProfiles {
+    id
+    bio
+    experienceYears
+    hourlyRate
+    licenseNumber
+    websiteUrl
+  }
+}
+
+mutation UpdateProjectStatus($id: UUID!, $status: String!) @auth(level: USER) {
+  project_update(key: {id: $id}, data: {status: $status})
+}
+
+query GetMyReviews($clientId: UUID!) @auth(level: USER) {
+  reviews(where: {clientId: {eq: $clientId}}) {
+    id
+    comment
+    rating
+    contractorProfile {
+      id
+    }
+    project {
+      id
+    }
+  }
+}

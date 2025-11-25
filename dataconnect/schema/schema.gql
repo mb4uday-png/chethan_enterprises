@@ -1,0 +1,64 @@
+type User @table {
+  email: String!
+  passwordHash: String!
+  accountType: String!
+  createdAt: Timestamp!
+  firstName: String
+  lastName: String
+  phoneNumber: String
+  companyName: String
+  profilePictureUrl: String
+}
+
+type Service @table {
+  name: String!
+  description: String!
+  iconUrl: String
+}
+
+type ContractorProfile @table {
+  user: User
+  licenseNumber: String!
+  experienceYears: Int!
+  bio: String
+  websiteUrl: String
+  hourlyRate: Float
+}
+
+type ContractorService @table(key: ["contractorProfile", "service"]) {
+  contractorProfile: ContractorProfile!
+  service: Service!
+  createdAt: Timestamp!
+  specialization: String
+}
+
+type Project @table {
+  client: User
+  hiredContractor: ContractorProfile
+  title: String!
+  description: String!
+  location: String!
+  status: String!
+  createdAt: Timestamp!
+  budget: Float
+  startDate: Date
+  endDate: Date
+}
+
+type Bid @table {
+  project: Project
+  contractorProfile: ContractorProfile
+  amount: Float!
+  bidDate: Timestamp!
+  status: String!
+  notes: String
+}
+
+type Review @table {
+  project: Project
+  client: User
+  contractorProfile: ContractorProfile
+  rating: Int!
+  createdAt: Timestamp!
+  comment: String
+}
