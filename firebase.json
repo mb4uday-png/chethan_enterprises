@@ -1,4 +1,10 @@
 {
+  "firestore": {
+    "rules": "CEApp/firestore.rules"
+  },
+  "storage": {
+    "rules": "CEApp/storage.rules"
+  },
   "hosting": {
     "public": "CEApp/dist",
     "ignore": [
